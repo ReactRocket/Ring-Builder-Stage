@@ -2,7 +2,12 @@ import React from 'react'
 
 const ProductCard = () => {
   return (
-    <div>ProductCard</div>
+    <>
+      <div className='h-[40vh] w-[30%] bg-red-500 '>
+
+      </div>
+    
+    </>
   )
 }
 
