@@ -4,7 +4,7 @@ const ProductFilter = () => {
   const [productView, setProductView] = useState(1);
   return (
     <>
-      <div className=" min-h-14 w-full flex py-10 ">
+      <div className=" min-h-14 w-full flex pb-10 ">
         <div className=" min-h-14 w-full   ">
           <span className="font-[lato] text-[#804294] font-medium text-xl ">
             Round Natural Diamond
@@ -28,7 +28,7 @@ const ProductFilter = () => {
                 <option>Best Value</option>
               </select>
             </div>
-            <div className="h-full w-1/4 p-1 rounded-md border flex justify-center items-center  border-[#804294]  ">
+            <div className="h-full w-1/3 p-1 gap-2 rounded-md border flex justify-center items-center  border-[#804294]  ">
               <button
                 className={`rounded-sm ${
                   productView === 1 ? "bg-[#804294]" : "bg-white"
