@@ -8,8 +8,16 @@ const Breadcrumb = () => {
       <span className="font-medium text-sm font-lato text-prussian-blue-light">
         Ring Builder
       </span>
-      <section className="  w-full h-full ">
-        <div className="flex relative right-5 border border-[#E6E6E6] bg-white  w-full h-full overflow-hidden">
+      <section
+        className={` border border-[#E6E6E6]  ${
+          activeButton === 2 && "bg-[#804294]"
+        } w-full h-full overflow-hidden`}
+      >
+        <div
+          className={`flex relative right-5  ${
+            activeButton === 2 && "bg-[#804294]"
+          }  w-full h-full overflow-hidden`}
+        >
           <article
             onClick={() => setActiveButton(0)}
             className={`cursor-pointer ${
@@ -89,7 +97,7 @@ const Breadcrumb = () => {
               activeButton === 2
                 ? "bg-[#804294] text-white"
                 : "bg-white text-[#464646]"
-            } overflow-hidden  triangle-top-right min-h-[10vh] w-full relative left-5  flex justify-center items-center`}
+            } overflow-hidden  triangle-top-right min-h-[10vh] w-full  flex justify-center items-center`}
           >
             <div className="skew-negate  h-[50%]   w-full  flex justify-start px-10 items-center">
               <div className="h-full w-[15%] flex justify-center items-center">
