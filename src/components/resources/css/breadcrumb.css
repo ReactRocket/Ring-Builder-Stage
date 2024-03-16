@@ -1,0 +1,36 @@
+#polygon-r{
+    clip-path: polygon(0% 0%, 100% 0%, 96% 100%, 0% 100%);
+}
+#polygon-l{
+    clip-path: polygon(4% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+#polygon-x{
+    clip-path: polygon(4% 0%, 100% 0%, 96% 100%, 0% 100%);
+}
+
+.diamond::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 16px solid red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .diamond::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 16px solid red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
