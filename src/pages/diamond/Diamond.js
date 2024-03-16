@@ -1,7 +1,11 @@
 import React from "react";
 import Breadcrumb from "../../components/Breadcrumb";
 import ChooseDiamonds from "../../components/ChooseDiamonds";
+
 import ProductFilter from "../../components/ProductFilter";
+
+
+import ProductTableView from "../../components/ProductTableView";
 
 
 const Diamond = () => {
@@ -11,7 +15,7 @@ const Diamond = () => {
         <Breadcrumb />
         <ChooseDiamonds/>
       <ProductFilter/>
-        
+        <ProductTableView />
       </div>
     </div>
   );
