@@ -16,7 +16,8 @@ module.exports = {
         "outer-space": "#464646",
         "sandy-brown": "#F8A066",
         "ruddy-brown": "#B5662D",
-        "prussian-blue": "#00324A",
+        "prussian-blue-light": "#804294",
+        "prussian-blue-dark": "#00324A",
         "eerie-black": "#1E1E1E",
       },
       fontSize: {
@@ -38,15 +39,15 @@ module.exports = {
         "heading-6-desktop": "22px",
       },
       lineHeight: {
-        "auto": "auto",
+        auto: "auto",
         "heading-6": "30px",
       },
       letterSpacing: {
-        "0": "0%",
+        0: "0%",
       },
       fontFamily: {
-        'tomato-grotesk': ['Tomato Grotesk', 'sans-serif'],
-        'poppins': ['Poppins', 'sans-serif'],
+        "tomato-grotesk": ["Tomato Grotesk", "sans-serif"],
+        poppins: ["Poppins", "sans-serif,lato"],
       },
       fontWeight: {
         bold: 700,
