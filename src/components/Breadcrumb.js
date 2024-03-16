@@ -44,7 +44,13 @@ const Breadcrumb = () => {
                 <h1 className="text-[100%] font-medium">Diamond</h1>
                 <p className="text-[70%] text-nowrap">Choose your diamond</p>
               </div>
-              <div className="h-full w-[30%] flex flex-col border-l border-l-[#ffffff5a] justify-center items-start pl-4">
+              <div
+                className={`h-full w-[30%] flex flex-col border-l ${
+                  activeButton === 0
+                    ? "border-l-[#ffffff5a] "
+                    : "border-l-[#4646465a] "
+                }  justify-center items-start pl-4`}
+              >
                 <h1 className="text-[100%] font-medium ">$1,025</h1>
                 <p className="text-[70%] text-nowrap">View | Edit</p>
               </div>
@@ -85,7 +91,13 @@ const Breadcrumb = () => {
                 <h1 className="text-[100%] font-medium">Settings</h1>
                 <p className="text-[70%] text-nowrap">Choose your settings</p>
               </div>
-              <div className="h-full w-[30%] flex flex-col border-l border-l-[#4646465a] justify-center items-start pl-4">
+              <div
+                className={`h-full w-[30%] flex flex-col border-l ${
+                  activeButton === 1
+                    ? "border-l-[#ffffff5a] "
+                    : "border-l-[#4646465a] "
+                }   justify-center items-start pl-4`}
+              >
                 <h1 className="text-[100%] font-medium ">$1,025</h1>
                 <p className="text-[70%] text-nowrap">View | Edit</p>
               </div>
