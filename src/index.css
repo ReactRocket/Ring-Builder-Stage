@@ -1,3 +1,58 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ----------------------------- */
+
+/* Desktop Only : */
+
+/* 1) Variables */
+
+/* font-family */
+:root {
+  --body-font-family: Lato;
+}
+
+/* colors */
+:root {
+  --white: #ffffff;
+  --seashell: #fff5ee;
+  --alice-blue: #effaff;
+  --sandy-brown: #f8a066;
+  --ruddy-brown: #b5662d;
+  --prussian-blue: #00324a;
+  --outer-space: #464646;
+  --eerie-black: #1e1e1e;
+}
+
+/* ----------------------------- */
+
+/* 2) Reset margins, paddings, and border for most elements */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 1;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font-family);
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}

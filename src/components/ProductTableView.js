@@ -1053,9 +1053,13 @@ const ProductTableView = () => {
   return (
     <table className="w-full min-h-screen">
       <thead className="w-full h-[8vh] border-y  text-[#804294] font-medium text-sm">
-        <tr>
+        <tr className="">
           {headData?.map((item, index) => {
-            return <td className="text-center" key={index}>{item}</td>;
+            return (
+              <td className="text-center " key={index}>
+                {item}
+              </td>
+            );
           })}
         </tr>
       </thead>
@@ -1063,8 +1067,12 @@ const ProductTableView = () => {
         {bodyData?.map((item, index) => {
           return (
             <tr key={index} className="h-[8vh] w-full border-b ">
-              <td className="flex gap-2 py-3 justify-center ">{item.view}</td>
-              <td className="text-center">{item.shape}</td>
+              <td className="   text-center ">
+                <div className=" flex justify-center icon gap-3">
+                  {item.view}
+                </div>
+              </td>
+              <td className="text-center ">{item.shape}</td>
               <td className="text-center">${item.price}</td>
               <td className="text-center">{item.carat}</td>
               <td className="text-center">{item.color}</td>
