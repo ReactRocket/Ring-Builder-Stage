@@ -13,13 +13,13 @@ const ProductCard = () => {
           </div>
 
           <div className="h-[38px] w-[216px] text-center flex justify-center items-center gap-10">
-            <span className="text-center  w-full text-nowrap font-[500]  leading-[19.2px]  font-[lato] text-[16px] text-[#464646]">
+            <span className="text-center  w-full text-nowrap font-[500]  leading-[19.2px]   font-['Lato', sans-serif] text-[16px] text-[#464646]">
               <span class="inline-block">ROUND 0.7 E SI1 EXCELLENT</span>
               <span class="block mx-auto">GIA</span>
             </span>
           </div>
           <div className="h-[30px] w-[234px] flex justify-center items-center mt-5 ">
-            <span className="text-center text-[#804294] font-[lato] w-[500px] text-[22px]">
+            <span className="text-center text-[#804294]  font-['Lato', sans-serif] w-[500px] text-[22px]">
               $1324.00 (Setting Price)
             </span>
           </div>

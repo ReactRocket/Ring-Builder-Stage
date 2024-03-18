@@ -50,7 +50,7 @@ const ChooseDiamonds = () => {
             <p
               className={`${
                 option === 1 ? "text-[#804294]" : "text-[#787878]"
-              } font-[lato] w-32 h-5 text-nowrap font-semibold text-[#804294]}`}
+              }  font-['Lato', sans-serif] w-32 h-5 text-nowrap font-semibold text-[#804294]}`}
             >
               Natural Diamonds
             </p>
@@ -102,7 +102,7 @@ const ChooseDiamonds = () => {
             <p
               className={`${
                 option === 2 ? "text-[#4FAB5E]  " : "text-[#787878]"
-              } font-[lato] w-32 h-5 text-center text-nowrap font-semibold text-[#787878]}`}
+              }  font-['Lato', sans-serif] w-32 h-5 text-center text-nowrap font-semibold text-[#787878]}`}
             >
               Lab Grown Diamonds
             </p>

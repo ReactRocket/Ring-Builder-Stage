@@ -2,8 +2,15 @@ import React from "react";
 import "../components/resources/css/tooltip.css";
 const Tooltip = ({ data, toggle }) => {
   return (
-    <div className="relative w-[450px] h-[200px] ">
-      <span id="triangle-up" className="absolute -top-[14.5px] left-5"></span>
+    <div
+      className="z-50 top-12 -left-5 absolute rounded-xl w-[450px] shadow h-[200px] 
+      font-['Lato', sans-serif] "
+      style={{ boxShadow: "0px 0px 15px 0px #0000004D" }}
+    >
+      <span
+        id="triangle-up"
+        className="absolute -top-[14.5px] shadow-xl left-5"
+      ></span>
       <div className="h-full bg-white w-full rounded-lg  shadow-xl p-5 overflow-hidden ">
         <div className="w-full h-[7%] flex justify-between items-center pb-5 ">
           <h1 className="font-medium text-[#804294] text-lg ">

@@ -2,16 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Lato';
+  src: url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap'); 
+}
+
+*{
+  font-family:  "Lato", sans-serif;
+}
+
+
 /* ----------------------------- */
 
 /* Desktop Only : */
 
 /* 1) Variables */
 
-/* font-family */
-:root {
-  --body-font-family: Lato;
-}
 
 /* colors */
 :root {
@@ -28,21 +34,6 @@
 /* ----------------------------- */
 
 /* 2) Reset margins, paddings, and border for most elements */
-
-* {
-  margin: 0;
-  padding: 0;
-  border: 1;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: var(--body-font-family);
-  font-style: normal;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0;
-}
 
 ul,
 ol {

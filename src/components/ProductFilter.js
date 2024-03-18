@@ -6,11 +6,11 @@ const ProductFilter = () => {
     <>
       <div className=" min-h-14 w-full flex pb-10 ">
         <div className=" min-h-14 w-full   ">
-          <span className="font-[lato] text-[#804294] font-medium text-xl ">
+          <span className=" font-['Lato', sans-serif] text-[#804294] font-medium text-xl ">
             Round Natural Diamond
           </span>
 
-          <p className="font-[lato] font-normal text-base">
+          <p className=" font-['Lato', sans-serif] font-normal text-base">
             Shop Certified Natural Diamonds 277,856 Conflict-Free Natural
             Diamonds
           </p>
