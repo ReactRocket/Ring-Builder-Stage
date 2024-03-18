@@ -29,9 +29,10 @@ const Breadcrumb = () => {
             <div className="skew-negate  h-[50%]   w-full  flex justify-start px-10 items-center">
               <div className="h-full w-[15%] flex justify-center items-center ">
                 <svg
-                  width="50"
-                  height="50"
+                  width="40"
+                  height="40"
                   viewBox="0 0 50 50"
+                  className="object-contain"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
@@ -67,8 +68,8 @@ const Breadcrumb = () => {
             <div className="skew-negate  h-[50%]   w-full  flex justify-start px-10 items-center">
               <div className="h-full w-[15%] flex justify-center items-center">
                 <svg
-                  width="50"
-                  height="50"
+                  width="40"
+                  height="40"
                   viewBox="0 0 50 50"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -114,8 +115,8 @@ const Breadcrumb = () => {
             <div className="skew-negate  h-[50%]   w-full  flex justify-start px-10 items-center">
               <div className="h-full w-[15%] flex justify-center items-center">
                 <svg
-                  width="50"
-                  height="50"
+                  width="40"
+                  height="40"
                   viewBox="0 0 50 50"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
