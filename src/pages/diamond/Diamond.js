@@ -5,6 +5,7 @@ import ChooseDiamonds from "../../components/ChooseDiamonds";
 import ProductFilter from "../../components/ProductFilter";
 
 import ProductTableView from "../../components/ProductTableView";
+import AdvancedFilter from "../../components/AdvancedFilter";
 
 const Diamond = () => {
   return (
@@ -12,6 +13,7 @@ const Diamond = () => {
       <div className="h-[90%] w-[85%] flex-col py-10 mx-auto flex justify-start items-center">
         <Breadcrumb />
         <ChooseDiamonds />
+        <AdvancedFilter/>
         <ProductFilter />
         <ProductTableView />
       </div>
