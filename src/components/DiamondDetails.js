@@ -1,8 +1,122 @@
 import React from "react";
 import Maindiamond from "../components/resources/images/diamond_details/image 1.svg";
-import detail from "../components/resources/images/diamond_details/info 4.svg";
+
+import rectangle from "../components/resources/images/diamond_details/Rectangle.svg";
+
+import img1 from "../components/resources/images/diamond_details/image1.svg";
+import img2 from "../components/resources/images/diamond_details/image2.svg";
+import img3 from "../components/resources/images/diamond_details/image3.svg";
+import img4 from "../components/resources/images/diamond_details/image4.svg";
+import img5 from "../components/resources/images/diamond_details/image5.svg";
+import img6 from "../components/resources/images/diamond_details/image6.svg";
 
 const DiamondDetails = () => {
+  const details = [
+    {
+      imageSrc: img1,
+      altText: "img1",
+    },
+    {
+      imageSrc: img2,
+      altText: "img1",
+    },
+    {
+      imageSrc: img3,
+      altText: "img1",
+    },
+    {
+      imageSrc: img4,
+      altText: "img1",
+    },
+    {
+      imageSrc: img5,
+      altText: "img1",
+    },
+    {
+      imageSrc: img6,
+      altText: "img1",
+    },
+  ];
+  const diamondCharacteristics = [
+    {
+      name: "IGI",
+      value: "View Certificate",
+    },
+
+    {
+      name: "Table",
+      value: "60%",
+    },
+    {
+      name: "Shape",
+      value: "Round",
+    },
+    {
+      name: "Depth",
+      value: "61.9%",
+    },
+    {
+      name: "Carat",
+      value: "0.45",
+    },
+    {
+      name: "L/W Ratio",
+      value: "1.01",
+    },
+    {
+      name: "Cut",
+      value: "Rare Carat Ideal",
+    },
+    {
+      name: "Measurement",
+      value: "4.91 x 4.87 x 3.03 mm",
+    },
+    {
+      name: "Color",
+      value: "E",
+    },
+    {
+      name: "Crown Angle",
+      value: "34.9",
+    },
+    {
+      name: "Clarity",
+      value: "VS1",
+    },
+    {
+      name: "Pavilion Angle ",
+      value: "41.3",
+    },
+    {
+      name: "Fluorescence ",
+      value: "None",
+    },
+    {
+      name: "Girdle Thick",
+      value: "Med.",
+    },
+    {
+      name: "Polish",
+      value: "Excellent",
+    },
+    {
+      name: "Girdle % ",
+      value: "3.5%",
+    },
+    {
+      name: "Symmetry",
+      value: "Excellent",
+    },
+    {
+      name: "Seller Comments",
+      value: "Eye Clean",
+    },
+    {
+      name: "Price",
+      value: "$385",
+    }
+  ];
+
   return (
     <>
       <div className="w-full bg-red-4000 h-screen px-10 py-10">
@@ -14,9 +128,24 @@ const DiamondDetails = () => {
         <div className="w-full h-5/6    py-5 flex gap-10">
           {/* First section  */}
 
-          <div className="w-1/2 bg-white rounded-md h-full border-2 flex justify-center items-center border-[#DCDCDC]">
-            <img className="object-cover h-96 " src={Maindiamond} />
+          <div className="w-1/2 bg-white h-full border-2 ">
+            <div className="w-full  rounded-md cursor-pointer h-full flex justify-center items-center border-[#DCDCDC]">
+              <img className="object-cover h-96 " src={Maindiamond} />
+            </div>
+            <div className="w-full  h-24 py-4 ">
+              <ul className="flex gap-5">
+                {details.map((detail, index) => (
+                  <li
+                    className="border w-40 rounded-md cursor-pointer p-1"
+                    key={index}
+                  >
+                    <img src={detail.imageSrc} alt={detail.altText} />
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
+
           {/* second section  */}
           <div className="w-1/2 h-full ">
             <div className="w-full h-8">
@@ -180,6 +309,65 @@ const DiamondDetails = () => {
                 <p className=" font-['Lato', sans-serif] text-[#464646] ">
                   100% Money-Back Guarantee.
                 </p>
+              </div>
+            </div>
+            <div className="w-full  h-48  flex gap-4 ">
+              <div className="w-[30%]  h-full  ">
+                <img className="h-full w-full object-contain" src={rectangle} />
+              </div>
+              <div className="w-[70%] h-full ">
+                <div className="">
+                  <p className="text-[#804294] font-[Tomato Grotesk] text-2xl font-semibold">
+                    Uniquely Yours
+                  </p>
+                </div>
+                <div className="w-80 py-2">
+                  <p className="font-[lato] text-[#464646] text-lg wrap">
+                    1/6 CTW. Diamond set with purchase over
+                  </p>
+                  <p className="font-[lato] text-[#464646] text-lg wrap">
+                    $1,000.
+                  </p>
+                </div>
+
+                <div className="w-80 ">
+                  <p className="font-[lato] text-[#464646] text-lg wrap">
+                    1/2 CTW. Diamond set with purchase over
+                  </p>
+                  <p className="font-[lato] text-[#464646] text-lg wrap">
+                    $3,000.
+                  </p>
+                </div>
+                <div className=" w-32">
+                  <p className="cursor-pointer text-lg font-bold text-[#464646] font-['Lato', sans-serif]">
+                    *Terms apply
+                  </p>
+                </div>
+              </div>
+            </div>
+            <hr className="mt-5 border-[#DCDCDC]" />
+            <div className="h-full w-full py-5 ">
+              <h1 className="text-[#804294] font- font-medium text-2xl ">
+                Diamond Information
+              </h1>
+              <div className="h-full w-full py-5 ">
+                <ul className="grid grid-cols-2 w-full border-[#DCDCDC] border  ">
+                  {diamondCharacteristics.map((property) => (
+                    <li
+                      className="border w-full flex gap-4 p-1.5"
+                      key={property.name}
+                    >
+                      <div className="text-[#804294] font-medium text-sm h-full px-2 w-1/2">
+                        {property.name}
+                      </div>
+                      :
+                      <div className="w-1/2 h-full text-sm font-medium  px-3 text-nowrap text-[#464646]">
+                        {" "}
+                        {property.value}
+                      </div>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
