@@ -1,16 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Shape from "./subComponents/Shape";
-import Round from "../resources/images/AllShape/Round.svg";
-import Miner from "../resources/images/AllShape/Miner.svg";
-import Oval from "../resources/images/AllShape/Oval.svg";
-import Pear from "../resources/images/AllShape/Pear.svg";
-import Princess from "../resources/images/AllShape/Princess.svg";
-import Radiant from "../resources/images/AllShape/Radiant.svg";
-import S_Radiant from "../resources/images/AllShape/SQ.Radiant.svg";
-import Emerald from "../resources/images/AllShape/Emerald.svg";
-import Asscher from "../resources/images/AllShape/Asscher.svg";
-import Heart from "../resources/images/AllShape/Heart.svg";
-import Marquise from "../resources/images/AllShape/Marquise.svg";
+import AdvancedFilterContainer from "./subComponents/AdvancedFilterContainer";
 
 const data = [];
 
@@ -37,56 +27,67 @@ const infoSVG = (
 );
 
 const shapesArray = [
-  { name: "Round", image: Round },
-  { name: "Miner", image: Miner },
-  { name: "Oval", image: Oval },
-  { name: "Pear", image: Pear },
-  { name: "Princess", image: Princess },
-  { name: "Radiant", image: Radiant },
-  { name: "S Radiant", image: S_Radiant },
-  { name: "Emerald", image: Emerald },
-  { name: "Asscher", image: Asscher },
-  { name: "Heart", image: Heart },
-  { name: "Marquise", image: Marquise },
+  "Round",
+  "Miner",
+  "Oval",
+  "Pear",
+  "Princess",
+  "Radiant",
+  "S Radiant",
+  "Emerald",
+  "Asscher",
+  "Heart",
+  "Marquise",
 ];
 
 const advancedFilterList = [
+  // {
+  //   title: "Shape",
+  //   value: shapesArray,
+  // },
   {
-    title: "Shape",
-    value: shapesArray,
+    title: "Cut",
+    value: ["Very Good", "Excellent", "Ideal"],
+    min: 0,
+    max: 3,
+  },
+  {
+    title: "Clarity",
+    value: ["I1", "SI2", "SI1", "VS2", "VS1", "VVS2", "VVS1", "FL/IF"],
+    min: 0,
+    max: 8,
   },
   {
     title: "Carat",
     value: data,
   },
   {
-    title: "Color",
-    value: ["L", "K", "J", "I", "H", "G", "F", "E", "D"],
-  },
-  {
-    title: "Cut",
-    value: ["Very Good", "Excellent", "Ideal"],
-  },
-  {
-    title: "Clarity",
-    value: ["I1", "SI2", "SI1", "VS2", "VS1", "VVS2", "VVS1", "FL/IF"],
-  },
-
-  {
     title: "Price",
     value: data,
   },
   {
-    title: "Polish",
-    value: ["Excellent", "Very Good", "Good"],
+    title: "Color",
+    value: ["L", "K", "J", "I", "H", "G", "F", "E", "D"],
+    min: 0,
+    max: 9,
   },
   {
-    title: "Symmetry",
+    title: "Polish",
     value: ["Excellent", "Very Good", "Good"],
+    min: 0,
+    max: 3,
+  },
+  {
+    title: "Symm",
+    value: ["Excellent", "Very Good", "Good"],
+    min: 0,
+    max: 3,
   },
   {
     title: "Fluor",
     value: ["None", "Faint", "Medium", "Strong"],
+    min: 0,
+    max: 4,
   },
   {
     title: "Table %",
@@ -104,13 +105,32 @@ const advancedFilterList = [
 ];
 
 const AdvancedFilter = () => {
-  return (
-    <div className="min-h-[50vh] w-full  text-[--prussian-blue]">
-      {advancedFilterList?.map((item) => {
-        item.title === "Shape" && <Shape icon={infoSVG} data={item.value} />;
-      })}
+  const [advancedFilterToggle, setAdvancedFilterToggle] = useState(false);
 
+  return (
+    <div className="relative min-h-[50vh] w-full flex flex-col justify-center items-center gap-3 mb-20 pb-20 border-b  text-[--prussian-blue]">
       <Shape icon={infoSVG} data={shapesArray} />
+      <section className="h-full w-full grid grid-cols-2 gap-x-5 gap-y-3">
+        {advancedFilterList?.map((item) => {
+          return (
+            <AdvancedFilterContainer
+              key={item.title} // Don't forget to add a unique key prop when mapping over arrays
+              title={item.title}
+              icon={infoSVG}
+              data={item.value}
+              min={item.min}
+              max={item.max}
+            />
+          );
+        })}
+      </section>
+
+      <button
+        onClick={() => setAdvancedFilterToggle(!advancedFilterToggle)}
+        className="absolute -bottom-6   h-12 w-1/6  rounded-sm text-white mx-auto font-['Lato',sans-serif] font-[500] text-[16px] leading-[20px] bg-[#804294] "
+      >
+        Advanced Option
+      </button>
     </div>
   );
 };
