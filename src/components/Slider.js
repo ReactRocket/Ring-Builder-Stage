@@ -4,12 +4,7 @@ import "./resources/css/Slider.css";
 
 const test = () => {};
 
-const Slider = ({
-  min = 1,
-  max = 100,
-  onChange = { test },
-  dataArray = [],
-}) => {
+const Slider = ({ min = 1, max = 100, onChange = { test }, data = [] }) => {
   const [minVal, setMinVal] = useState(min);
   const [maxVal, setMaxVal] = useState(max);
   const minValRef = useRef(min);
@@ -82,13 +77,15 @@ const Slider = ({
         <div className="slider__track" />
         <div ref={range} className="slider__range" />
       </div>
-      <div className="values">
-        {dataArray.length > 0 ? (
-          dataArray?.map((val) => {
-            return <div>{val}</div>;
-          })
+      <>
+        {data.length > 0 ? (
+          <div className="w-full flex justify-center items-center">
+            {data?.map((val) => {
+              return <span className="py-5 w-full text-center">{val}</span>;
+            })}
+          </div>
         ) : (
-          <>
+          <div className="values">
             <input
               className="slider__left-value "
               onChange={(e) =>
@@ -105,9 +102,9 @@ const Slider = ({
               value={maxVal}
               type="number"
             />
-          </>
+          </div>
         )}
-      </div>
+      </>
     </div>
   );
 };

@@ -4,7 +4,7 @@
   --THUMB-COLOR: #804294;
   --RANGE-COLOR: #804294;
   --TRACK-COLOR: #dcdcdc;
-  --THUMB-SIZE: 20px;
+  --THUMB-SIZE: 15px;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -15,13 +15,18 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
 .container {
   position: relative;
   width: 100%;
+  color: #464646;
+  font-family: "Lato", sans-serif;
+  width: 500;
+  font-size: 15px;
+  line-height: 18px;
 }
 
 .thumb,
