@@ -1,31 +1,29 @@
 import React from "react";
-import ProductChild from "../resources/images/ProductChild.svg";
+import productIMG from "./resources/images/product_card/ProductChild.svg";
 
 const ProductCard = () => {
   return (
-    <>
-      <div className="px-10 py-10">
-        <div className="h-[450px] w-[383px] border border-3 border-[#DCDCDC] flex flex-col justify-around items-center">
-
-          {/* // for img */}
-          <div className="w-[260px] h-[260px]  bg-white flex justify-center items-center ">
-            <img src={ProductChild} />
-          </div>
-
-          <div className="h-[38px] w-[216px] text-center flex justify-center items-center gap-10">
-            <span className="text-center  w-full text-nowrap font-[500]  leading-[19.2px]   font-['Lato', sans-serif] text-[16px] text-[#464646]">
-              <span class="inline-block">ROUND 0.7 E SI1 EXCELLENT</span>
-              <span class="block mx-auto">GIA</span>
+    <div className="min-h-[45vh] w-full border border-[#DCDCDC] flex justify-center items-center">
+      <div className="w-[90%] h-full py-10  flex-col flex justify-between items-center gap-3">
+        <div className="h-[60%]  w-full flex justify-center items-center">
+          <img
+            src={productIMG}
+            alt="product img"
+            className="object-cover aspect-square h-3/4 w-3/4"
+          />
+        </div>
+        <div className="h-[30%] w-full flex justify-between flex-col items-center gap-5">
+          <p className="w-full text-center font-['Lato',sans-serif] text-[#464646] font-[400] leading-[18px] text-[14px] px-3 ">
+            <span className="text-center text-wrap ">
+              ROUND 0.7 E SI1 EXCELLENT GIA
             </span>
-          </div>
-          <div className="h-[30px] w-[234px] flex justify-center items-center mt-5 ">
-            <span className="text-center text-[#804294]  font-['Lato', sans-serif] w-[500px] text-[22px]">
-              $1324.00 (Setting Price)
-            </span>
-          </div>
+          </p>
+          <p className="w-full text-center font-['Lato',sans-serif] text-[#804294] font-medium text-[18px] leading-[20px]">
+            $1324.00 (Setting Price)
+          </p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

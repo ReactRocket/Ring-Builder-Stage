@@ -5,7 +5,7 @@ const Breadcrumb = () => {
   const [activeButton, setActiveButton] = useState(0);
   return (
     <section className=" h-auto w-full flex flex-col gap-3 overflow-hidden">
-      <span className="font-medium text-sm  font-['Lato', sans-serif] text-prussian-blue-light">
+      <span className="font-medium text-sm  font-['Lato', sans-serif] text-[#804294]">
         Ring Builder
       </span>
       <section
