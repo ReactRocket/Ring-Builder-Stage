@@ -9,6 +9,8 @@ import img3 from "../components/resources/images/diamond_details/image3.svg";
 import img4 from "../components/resources/images/diamond_details/image4.svg";
 import img5 from "../components/resources/images/diamond_details/image5.svg";
 import img6 from "../components/resources/images/diamond_details/image6.svg";
+import DiamondInfoTable from "./subComponents/DiamondInfoTable";
+import RingInfoTable from "./subComponents/RingInfoTable";
 
 const DiamondDetails = () => {
   const details = [
@@ -37,106 +39,27 @@ const DiamondDetails = () => {
       altText: "img1",
     },
   ];
-  const diamondCharacteristics = [
-    {
-      name: "IGI",
-      value: "View Certificate",
-    },
-
-    {
-      name: "Table",
-      value: "60%",
-    },
-    {
-      name: "Shape",
-      value: "Round",
-    },
-    {
-      name: "Depth",
-      value: "61.9%",
-    },
-    {
-      name: "Carat",
-      value: "0.45",
-    },
-    {
-      name: "L/W Ratio",
-      value: "1.01",
-    },
-    {
-      name: "Cut",
-      value: "Rare Carat Ideal",
-    },
-    {
-      name: "Measurement",
-      value: "4.91 x 4.87 x 3.03 mm",
-    },
-    {
-      name: "Color",
-      value: "E",
-    },
-    {
-      name: "Crown Angle",
-      value: "34.9",
-    },
-    {
-      name: "Clarity",
-      value: "VS1",
-    },
-    {
-      name: "Pavilion Angle ",
-      value: "41.3",
-    },
-    {
-      name: "Fluorescence ",
-      value: "None",
-    },
-    {
-      name: "Girdle Thick",
-      value: "Med.",
-    },
-    {
-      name: "Polish",
-      value: "Excellent",
-    },
-    {
-      name: "Girdle % ",
-      value: "3.5%",
-    },
-    {
-      name: "Symmetry",
-      value: "Excellent",
-    },
-    {
-      name: "Seller Comments",
-      value: "Eye Clean",
-    },
-    {
-      name: "Price",
-      value: "$385",
-    }
-  ];
 
   return (
     <>
       <div className="w-full bg-red-4000 h-screen px-10 py-10">
         <div className="bg-white  w-full h-8  ">
-          <span className="font-[Lato] text-[#1E1E1E] text-xl font-medium leading-7 text">
+          <span className="font-[Lato] text-[#1E1E1E] text-xl font-semibold leading-7 text">
             Solitaire Rings
           </span>
         </div>
-        <div className="w-full h-5/6    py-5 flex gap-10">
+        <div className="w-full h-5/6      py-5 flex gap-10">
           {/* First section  */}
 
-          <div className="w-1/2 bg-white h-full border-2 ">
-            <div className="w-full  rounded-md cursor-pointer h-full flex justify-center items-center border-[#DCDCDC]">
+          <div className="w-1/2 bg-white rounded-md h-full border-2 ">
+            <div className="w-full   cursor-pointer h-full flex justify-center items-center border-[#DCDCDC]">
               <img className="object-cover h-96 " src={Maindiamond} />
             </div>
             <div className="w-full  h-24 py-4 ">
               <ul className="flex gap-5">
                 {details.map((detail, index) => (
                   <li
-                    className="border w-40 rounded-md cursor-pointer p-1"
+                    className="border w-40 rounded-md cursor-pointer p-0.5"
                     key={index}
                   >
                     <img src={detail.imageSrc} alt={detail.altText} />
@@ -153,25 +76,25 @@ const DiamondDetails = () => {
                 0.70 Carat Emerald Lab Diamond
               </span>
             </div>
-            <div className="w-full py-2">
-              <span className="font-[Tomato Grotesk] text-2xl font-semibold text-[#804294] leading-9 ">
+            <div className="w-full py-2 flex  items-center">
+              <span className="font-[Tomato Grotesk] text-xl font-semibold text-[#804294] leading-9 ">
                 {" "}
                 $450.00
               </span>
-              <del className="font-[Poppins] px-2   text-[#464646] font-normal text-lg">
+              <del className="font-[Poppins] px-2   text-[#464646] font-normal text-base">
                 $599.99
               </del>
-              <span className="font-[Poppins] px-1   text-[#464646] font-normal text-lg">
+              <span className="font-[Poppins] px-1   text-[#464646] font-normal text-base">
                 (Setting Only)
               </span>
             </div>
             <div className="w-full ">
-              <span className="font-[Lato] text-[#464646] text-lg">
+              <span className="font-[Lato]  font-medium text-[#464646] text-lg leading-8">
                 Very Good Cut · E Color · VS2 Clarity · IGI Certified
               </span>
             </div>
-            <div className="w-full flex justify-start items-center gap-2 py-1">
-              <span className="text-[#000000] font-[Poppins] text-base">
+            <div className="w-full flex justify-start items-center gap-2 py-2">
+              <span className="text-[#000000] font-[Poppins] text-base leading-6">
                 Wholesaler Direct
               </span>
               <svg
@@ -195,7 +118,7 @@ const DiamondDetails = () => {
                 </defs>
               </svg>
             </div>
-            <div className="w-full h-10 flex gap-3">
+            <div className="w-full h-10 flex gap-3 mt-4">
               <button className=" bg-[#804294] text-xl  w-80 h-full rounded-sm font-[lato] text-white ">
                 {" "}
                 Add to Cart
@@ -254,7 +177,7 @@ const DiamondDetails = () => {
                   fill="#804294"
                 />
               </svg>
-              <span className="font-[lato] text-base text-[#464646]">
+              <span className="font-[lato] font-medium text-base text-[#464646]">
                 Free insured shipping by Monday, Mar 11. Ships as complete ring
                 with Diamond Selected by Monday, Mar 18.
               </span>
@@ -302,11 +225,11 @@ const DiamondDetails = () => {
                 </defs>
               </svg>
               <div>
-                <p className=" font-['Lato', sans-serif] text-[#464646]  ">
+                <p className=" font-[Lato] text-[#464646] font-normal  ">
                   We inspect & verify authenticity before shipping.
                 </p>
 
-                <p className=" font-['Lato', sans-serif] text-[#464646] ">
+                <p className=" font-[Lato] text-[#464646] font-normal ">
                   100% Money-Back Guarantee.
                 </p>
               </div>
@@ -322,54 +245,32 @@ const DiamondDetails = () => {
                   </p>
                 </div>
                 <div className="w-80 py-2">
-                  <p className="font-[lato] text-[#464646] text-lg wrap">
+                  <p className="font-[lato] text-[#464646] font-medium text-lg wrap">
                     1/6 CTW. Diamond set with purchase over
                   </p>
-                  <p className="font-[lato] text-[#464646] text-lg wrap">
+                  <p className="font-[lato] text-[#464646] font-medium text-lg wrap">
                     $1,000.
                   </p>
                 </div>
 
                 <div className="w-80 ">
-                  <p className="font-[lato] text-[#464646] text-lg wrap">
+                  <p className="font-[lato] text-[#464646] font-medium text-lg wrap">
                     1/2 CTW. Diamond set with purchase over
                   </p>
-                  <p className="font-[lato] text-[#464646] text-lg wrap">
+                  <p className="font-[lato] text-[#464646] font-medium text-lg wrap">
                     $3,000.
                   </p>
                 </div>
-                <div className=" w-32">
-                  <p className="cursor-pointer text-lg font-bold text-[#464646] font-['Lato', sans-serif]">
+                <div className=" w-32 ">
+                  <p className="cursor-pointer leading-8  text-base font-bold text-[#464646] font-['Lato', sans-serif]">
                     *Terms apply
                   </p>
                 </div>
               </div>
             </div>
             <hr className="mt-5 border-[#DCDCDC]" />
-            <div className="h-full w-full py-5 ">
-              <h1 className="text-[#804294] font- font-medium text-2xl ">
-                Diamond Information
-              </h1>
-              <div className="h-full w-full py-5 ">
-                <ul className="grid grid-cols-2 w-full border-[#DCDCDC] border  ">
-                  {diamondCharacteristics.map((property) => (
-                    <li
-                      className="border w-full flex gap-4 p-1.5"
-                      key={property.name}
-                    >
-                      <div className="text-[#804294] font-medium text-sm h-full px-2 w-1/2">
-                        {property.name}
-                      </div>
-                      :
-                      <div className="w-1/2 h-full text-sm font-medium  px-3 text-nowrap text-[#464646]">
-                        {" "}
-                        {property.value}
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+            <DiamondInfoTable />
+            
           </div>
         </div>
       </div>
