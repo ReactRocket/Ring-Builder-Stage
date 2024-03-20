@@ -238,9 +238,6 @@ const generateShape = (name, fillColor) => {
 const Shape = ({ data = [], icon }) => {
   const [activeShape, setActiveShape] = useState(0);
   const [tooltipToggle, setTooltipToggle] = useState(false);
-
-  console.log(activeShape);
-
   return (
     <div className="min-h-[12vh] w-full  px-5 py-2 rounded-lg flex flex-col gap-3 bg-[#fffff] border border-[#DCDCDC]">
       <div className="h-1/3 w-full  flex justify-start items-center gap-2">
@@ -258,11 +255,14 @@ const Shape = ({ data = [], icon }) => {
       <div className="min-h-2/3 w-full  flex justify-start items-center gap-5">
         {data?.map((shape, index) => {
           return (
-            <div className="p-1 flex flex-col  justify-center items-center gap-2">
+            <div
+              key={index}
+              className="p-1 flex flex-col  justify-center items-center gap-2"
+            >
               <div
                 className={`${
                   activeShape === index && "border-[#804294] bg-[#804294]"
-                } h-[35px] w-[35px]   gap-2 rounded-md focus:border flex justify-center items-center   object-contain  p-[5px] cursor-pointer`}
+                } h-auto w-auto   gap-2 rounded-md focus:border flex justify-center items-center   object-contain  p-3 cursor-pointer`}
                 key={index}
                 onClick={() => setActiveShape(index)}
               >

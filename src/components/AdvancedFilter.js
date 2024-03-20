@@ -47,18 +47,18 @@ const advancedFilterList = [
   // },
   {
     title: "Cut",
-    value: ["Very Good", "Excellent", "Ideal"],
+    value: ["Good","Very Good", "Excellent", "Rare Carat Ideal"],
     min: 0,
-    max: 3,
+    max: 4,
   },
   {
     title: "Clarity",
-    value: ["I1", "SI2", "SI1", "VS2", "VS1", "VVS2", "VVS1", "FL/IF"],
+    value: [ "SI2", "SI1", "VS2", "VS1", "VVS2", "VVS1", "FL","IF"],
     min: 0,
     max: 8,
   },
   {
-    title: "Carat",
+    title: "Carats",
     value: data,
   },
   {
@@ -73,13 +73,13 @@ const advancedFilterList = [
   },
   {
     title: "Polish",
-    value: ["Excellent", "Very Good", "Good"],
+    value: ["Excellent", "Very Good", "Excellent"],
     min: 0,
     max: 3,
   },
   {
     title: "Symm",
-    value: ["Excellent", "Very Good", "Good"],
+    value: ["Excellent", "Very Good", "Excellent"],
     min: 0,
     max: 3,
   },
@@ -108,20 +108,35 @@ const AdvancedFilter = () => {
   const [advancedFilterToggle, setAdvancedFilterToggle] = useState(false);
 
   return (
-    <div className="relative min-h-[50vh] w-full flex flex-col justify-center items-center gap-3 mb-20 pb-20 border-b  text-[--prussian-blue]">
+    <div className="relative min-h-[50vh] w-full flex flex-col justify-center items-center gap-3 mb-20 pb-20 border-b  text-[--prussian-blue] transition-all delay-1000 duration-1000">
       <Shape icon={infoSVG} data={shapesArray} />
-      <section className="h-full w-full grid grid-cols-2 gap-x-5 gap-y-3">
-        {advancedFilterList?.map((item) => {
-          return (
-            <AdvancedFilterContainer
-              key={item.title} // Don't forget to add a unique key prop when mapping over arrays
-              title={item.title}
-              icon={infoSVG}
-              data={item.value}
-              min={item.min}
-              max={item.max}
-            />
-          );
+      <section className="h-full w-full grid grid-cols-2 gap-x-5 gap-y-3 ">
+        {advancedFilterList?.map((item, index) => {
+          if (!advancedFilterToggle) {
+            if (index < 5) {
+              return (
+                <AdvancedFilterContainer
+                  key={item.title} // Don't forget to add a unique key prop when mapping over arrays
+                  title={item.title}
+                  icon={infoSVG}
+                  data={item.value}
+                  min={item.min}
+                  max={item.max}
+                />
+              );
+            }
+          } else {
+            return (
+              <AdvancedFilterContainer
+                key={item.title} // Don't forget to add a unique key prop when mapping over arrays
+                title={item.title}
+                icon={infoSVG}
+                data={item.value}
+                min={item.min}
+                max={item.max}
+              />
+            );
+          }
         })}
       </section>
 

@@ -1,20 +1,17 @@
 .triangle-top-left {
-    transform: skew(-25deg);
-    transform-origin: left;
-  
+  transform: skew(-12deg);
+  transform-origin: left;
 }
 
 .triangle-top-right {
-    transform: skew(-25deg);
-  
+  transform: skew(-12deg);
+  transform-origin: right;
 }
 
 .parallelogram {
-
-  transform: skew(-25deg);
-
+  transform: skew(-12deg);
 }
 
-.skew-negate  {
-    transform: skewX(25deg);
+.skew-negate {
+  transform: skewX(12deg);
 }

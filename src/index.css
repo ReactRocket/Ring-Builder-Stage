@@ -3,21 +3,24 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Lato';
-  src: url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap'); 
+  font-family: "Lato";
+  
+  src: url("https://fonts.gstatic.com/s/lato/v22/S6uyw4BMUTPHjx4wXg.woff2")
+      format("woff2"),
+    /* URL for Lato Regular */
+      url("https://fonts.gstatic.com/s/lato/v22/S6uyw4BMUTPHjx4wWw.woff")
+      format("woff"); /* URL for Lato Regular */
 }
 
-*{
-  font-family:  "Lato", sans-serif;
+* {
+  font-family: "Lato", sans-serif;
 }
-
 
 /* ----------------------------- */
 
 /* Desktop Only : */
 
 /* 1) Variables */
-
 
 /* colors */
 :root {

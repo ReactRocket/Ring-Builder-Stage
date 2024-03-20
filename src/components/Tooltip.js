@@ -3,7 +3,7 @@ import "../components/resources/css/tooltip.css";
 const Tooltip = ({ data, toggle }) => {
   return (
     <div
-      className="z-50 top-12 -left-5 absolute rounded-xl w-[450px] shadow h-[200px] 
+      className="z-50 top-10 -left-5 absolute rounded-xl w-[450px] shadow h-[200px] 
       font-['Lato', sans-serif] "
       style={{ boxShadow: "0px 0px 15px 0px #0000004D" }}
     >
