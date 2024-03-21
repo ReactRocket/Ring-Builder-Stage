@@ -1,11 +1,10 @@
 import React from "react";
-import Breadcrumb from "../../components/Breadcrumb";
 
 const Test = () => {
   return (
-    <>
+    <div className="">
     
-    </>
+    </div>
   );
 };
 
