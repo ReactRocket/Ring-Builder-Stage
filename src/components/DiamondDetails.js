@@ -238,7 +238,7 @@ const DiamondDetails = () => {
               <div className="w-[30%]  h-full  ">
                 <img className="h-full w-full object-contain" src={rectangle} />
               </div>
-              <div className="w-[70%] h-full  ">
+              <div className="w-[70%] h-full   ">
                 <div className="leading-8">
                   <p className="text-[#804294] font-[Tomato Grotesk] text-2xl font-semibold">
                     Uniquely Yours
@@ -269,8 +269,8 @@ const DiamondDetails = () => {
               </div>
             </div>
             <hr className="mt-5 border-[#DCDCDC]" />
-            <DiamondInfoTable />
-            {/* <RingInfoTable/> */}
+            {/* <DiamondInfoTable /> */}
+            <RingInfoTable/>
           </div>
         </div>
       </div>
