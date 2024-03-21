@@ -27,7 +27,7 @@ const ProductFilter = ({ setProductView, productView }) => {
                 <option>Best Value</option>
               </select>
             </div>
-            <div className="h-full w-1/3 p-1 gap-2 rounded-md border flex justify-center items-center  border-[#804294]  ">
+            <div className="h-full w-30 p-1   gap-2 rounded-md border flex justify-center items-center  border-[#804294]  ">
               <button
                 className={`rounded-sm ${
                   productView === false ? "bg-[#804294]" : "bg-white"

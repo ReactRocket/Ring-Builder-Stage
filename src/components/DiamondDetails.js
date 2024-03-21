@@ -185,8 +185,8 @@ const DiamondDetails = () => {
 
             <div className="w-full flex gap-3">
               <svg
-                width="22"
-                height="22"
+                width="20"
+                height="20"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -206,8 +206,8 @@ const DiamondDetails = () => {
             </div>
             <div className="w-full flex py-4 gap-3 ">
               <svg
-                width="22"
-                height="22"
+                width="20"
+                height="20"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -238,13 +238,13 @@ const DiamondDetails = () => {
               <div className="w-[30%]  h-full  ">
                 <img className="h-full w-full object-contain" src={rectangle} />
               </div>
-              <div className="w-[70%] h-full ">
-                <div className="">
+              <div className="w-[70%] h-full  ">
+                <div className="leading-8">
                   <p className="text-[#804294] font-[Tomato Grotesk] text-2xl font-semibold">
                     Uniquely Yours
                   </p>
                 </div>
-                <div className="w-80 py-2">
+                <div className="min-w-80 py-2">
                   <p className="font-[lato] text-[#464646] font-medium text-lg wrap">
                     1/6 CTW. Diamond set with purchase over
                   </p>
@@ -253,7 +253,7 @@ const DiamondDetails = () => {
                   </p>
                 </div>
 
-                <div className="w-80 ">
+                <div className="min-w-80 ">
                   <p className="font-[lato] text-[#464646] font-medium text-lg wrap">
                     1/2 CTW. Diamond set with purchase over
                   </p>
@@ -270,7 +270,7 @@ const DiamondDetails = () => {
             </div>
             <hr className="mt-5 border-[#DCDCDC]" />
             <DiamondInfoTable />
-            
+            {/* <RingInfoTable/> */}
           </div>
         </div>
       </div>
