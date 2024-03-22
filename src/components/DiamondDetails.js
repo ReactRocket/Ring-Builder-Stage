@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Maindiamond from "../components/resources/images/diamond_details/image 1.svg";
 
 import rectangle from "../components/resources/images/diamond_details/Rectangle.svg";
@@ -11,6 +11,8 @@ import img5 from "../components/resources/images/diamond_details/image5.svg";
 import img6 from "../components/resources/images/diamond_details/image6.svg";
 import DiamondInfoTable from "./subComponents/DiamondInfoTable";
 import RingInfoTable from "./subComponents/RingInfoTable";
+
+import MetalType from "./subComponents/MetalType";
 
 const DiamondDetails = () => {
   const details = [
@@ -39,6 +41,11 @@ const DiamondDetails = () => {
       altText: "img1",
     },
   ];
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleGroupClick = () => {
+    setIsClicked(!isClicked);
+  };
 
   return (
     <>
@@ -105,7 +112,7 @@ const DiamondDetails = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g clip-path="url(#clip0_197_15581)">
+                <g clipPath="url(#clip0_197_15581)">
                   <path
                     d="M10 0C4.47301 0 0 4.4725 0 10C0 15.5269 4.4725 20 10 20C15.527 20 20 15.5275 20 10C20 4.47309 15.5275 0 10 0ZM11.0269 13.9696C11.0269 14.2855 10.5662 14.6014 10.0002 14.6014C9.40785 14.6014 8.98668 14.2855 8.98668 13.9696V8.95445C8.98668 8.5859 9.40789 8.33574 10.0002 8.33574C10.5662 8.33574 11.0269 8.5859 11.0269 8.95445V13.9696ZM10.0002 7.12484C9.39473 7.12484 8.9209 6.6773 8.9209 6.17707C8.9209 5.67687 9.39477 5.2425 10.0002 5.2425C10.5926 5.2425 11.0665 5.67687 11.0665 6.17707C11.0665 6.6773 10.5925 7.12484 10.0002 7.12484Z"
                     fill="#804294"
@@ -118,6 +125,43 @@ const DiamondDetails = () => {
                 </defs>
               </svg>
             </div>
+
+            <div className="w-4/5 flex gap-28 justify-center items-center">
+              <div className="w-2/3 bg-slate-300">
+                <MetalType title={"White Gold 14K"} />
+              </div>
+              <div
+                onClick={handleGroupClick}
+                className="w-48 relative group  flex justify-center  items-center"
+              >
+                <select className="border   text-start p-4  w-full cursor-pointer rounded-md text-[#000000] appearance-none">
+                  <option>Select ring size</option>
+                  <option>Select ring size</option>
+                  <option>Select ring size</option>
+                  <option>Select ring size</option>
+                  <option>Select ring size</option>
+                  <option>Select ring size</option>
+                  <option>Select ring size</option>
+                </select>
+                <span className="absolute overflow-visible cursor-pointer right-3">
+                  <svg
+                   
+                    className={`w-4 h-4  ${
+                      isClicked ? " transform rotate-180" : ""
+                    }`}
+                    fill="none"
+                    viewBox="0 0 12 6"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 6L5.24537e-07 -1.04907e-06L12 0L6 6Z"
+                      fill="#969696"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+
             <div className="w-full h-10 flex gap-3 mt-4">
               <button className=" bg-[#804294] text-xl  w-80 h-full rounded-sm font-[lato] text-white ">
                 {" "}
@@ -132,7 +176,7 @@ const DiamondDetails = () => {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <g clip-path="url(#clip0_197_15621)">
+                  <g clipPath="url(#clip0_197_15621)">
                     <path
                       d="M21.3281 1.875C20.1416 1.87638 18.968 2.12082 17.8797 2.59326C16.7913 3.06569 15.8113 3.75609 15 4.62187C13.8111 3.35302 12.2683 2.47086 10.5717 2.08993C8.87513 1.709 7.10323 1.84688 5.48602 2.48568C3.8688 3.12448 2.48097 4.23469 1.50269 5.67219C0.524409 7.10968 0.000856078 8.80807 0 10.5469C0 19.1812 13.9266 27.6562 14.5312 27.9891C14.6771 28.0767 14.844 28.1229 15.0141 28.1229C15.1842 28.1229 15.3511 28.0767 15.4969 27.9891C16.0734 27.6562 30 19.1812 30 10.5469C29.9975 8.24771 29.0831 6.04343 27.4573 4.41767C25.8316 2.79192 23.6273 1.87748 21.3281 1.875ZM15 26.0812C12.5766 24.5344 1.875 17.3062 1.875 10.5469C1.8762 9.1031 2.33712 7.69721 3.19095 6.53297C4.04477 5.36872 5.24715 4.50661 6.62383 4.07156C8.0005 3.63652 9.47994 3.65116 10.8477 4.11335C12.2155 4.57554 13.4006 5.46128 14.2313 6.64219C14.3178 6.76502 14.4326 6.86526 14.566 6.93445C14.6993 7.00364 14.8474 7.03975 14.9977 7.03975C15.1479 7.03975 15.296 7.00364 15.4293 6.93445C15.5627 6.86526 15.6775 6.76502 15.7641 6.64219C16.594 5.45925 17.7794 4.5716 19.148 4.10811C20.5167 3.64461 21.9975 3.6294 23.3755 4.06467C24.7534 4.49994 25.9567 5.36305 26.8108 6.52869C27.6649 7.69433 28.1252 9.10183 28.125 10.5469C28.125 17.3016 17.4234 24.5297 15 26.0812Z"
                       fill="#804294"
@@ -212,7 +256,7 @@ const DiamondDetails = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g clip-path="url(#clip0_197_15614)">
+                <g clipPath="url(#clip0_197_15614)">
                   <path
                     d="M22.244 9.95907C22.1779 6.51376 21.6979 3.97267 21.7045 3.97032C21.5048 3.58079 21.1546 3.25501 20.7262 3.0886C17.9137 1.99782 15.1481 0.956729 12.4518 0.0684473C12.1762 -0.0224902 11.8856 -0.0224902 11.6104 0.0684473C8.91464 0.954385 6.14948 1.9936 3.33745 3.08298C2.95917 3.2297 2.64182 3.5011 2.43511 3.8311C2.45104 3.83298 1.85714 5.68688 1.75589 9.78142C1.69589 13.8764 2.20589 15.1031 2.18901 15.1045C2.46511 16.0045 2.98167 16.92 3.72182 17.8509C4.54917 18.8906 5.66714 19.9645 7.01761 21.0202C9.25307 22.7747 11.3451 23.8233 11.4328 23.8603C11.6226 23.9531 11.8237 24.0005 12.0309 24C12.2385 24 12.4396 23.9527 12.629 23.8594C12.7171 23.8224 14.8115 22.7705 17.046 21.0164C18.397 19.9599 19.5149 18.8859 20.3428 17.8467C21.1359 16.8497 21.6721 15.8714 21.9314 14.9105C21.921 14.9091 22.296 13.4053 22.244 9.95954V9.95907ZM13.1437 12.6464V14.8294C13.1437 15.4444 12.6454 15.9427 12.0304 15.9431C11.4154 15.9431 10.9167 15.4449 10.9167 14.8299V12.6774C10.1142 12.2784 9.56198 11.4506 9.56198 10.4939C9.56198 9.14767 10.6532 8.05595 11.9995 8.05595C13.3457 8.05595 14.437 9.1472 14.4374 10.4934C14.4374 11.4263 13.9134 12.2367 13.1437 12.6464Z"
                     fill="#804294"
@@ -270,7 +314,7 @@ const DiamondDetails = () => {
             </div>
             <hr className="mt-5 border-[#DCDCDC]" />
             {/* <DiamondInfoTable /> */}
-            <RingInfoTable/>
+            <RingInfoTable />
           </div>
         </div>
       </div>

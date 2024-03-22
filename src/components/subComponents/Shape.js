@@ -239,7 +239,8 @@ const Shape = ({ data = [], icon }) => {
   const [activeShape, setActiveShape] = useState(0);
   const [tooltipToggle, setTooltipToggle] = useState(false);
   return (
-    <div className="min-h-[12vh] w-full  px-5 py-2 rounded-lg flex flex-col gap-3 bg-[#fffff] border border-[#DCDCDC]">
+    
+<div className="min-h-[12vh] w-full  px-5 py-2 rounded-lg flex flex-col gap-3 bg-[#fffff] border border-[#DCDCDC]">
       <div className="h-1/3 w-full  flex justify-start items-center gap-2">
         <h3 className="font-[500] text-[16px] leading-[20px] font-['Lato', sans-serif] ">
           Shape
@@ -278,8 +279,7 @@ const Shape = ({ data = [], icon }) => {
           );
         })}
       </div>
-    </div>
-  );
+    </div>  );
 };
 
 export default Shape;
