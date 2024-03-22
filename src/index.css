@@ -4,12 +4,20 @@
 
 @font-face {
   font-family: "Lato";
-  
+
   src: url("https://fonts.gstatic.com/s/lato/v22/S6uyw4BMUTPHjx4wXg.woff2")
       format("woff2"),
     /* URL for Lato Regular */
       url("https://fonts.gstatic.com/s/lato/v22/S6uyw4BMUTPHjx4wWw.woff")
       format("woff"); /* URL for Lato Regular */
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLDz8Z1xlFd2JQEk.woff2")
+      format("woff2"),
+    url("https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLDz8Z11xlFd2JQ.woff")
+      format("woff");
 }
 
 * {
