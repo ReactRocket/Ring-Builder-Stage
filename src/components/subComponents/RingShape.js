@@ -735,31 +735,28 @@ const RingShape = ({ data = shapeData, icon, title = "Shape" }) => {
   const [activeShape, setActiveShape] = useState(0);
   const [tooltipToggle, setTooltipToggle] = useState(false);
   return (
-    <div className="min-h-[12vh] w-full  px-5 py-2 rounded-lg flex flex-col gap-3 bg-[#fffff] border border-[#DCDCDC]">
+    <div className="min-h-[12vh]  w-full  px-5 py-2 rounded-lg flex flex-col gap-3 bg-[#fffff] border border-[#DCDCDC]">
       <div className="h-1/3 w-full  flex justify-start items-center gap-2">
         <h3 className="font-[500] text-[16px] leading-[20px] font-['Lato', sans-serif] ">
           Ring shape
         </h3>
 
         <div
-          className="relative cursor-pointer"
+          className="relative cursor-pointer "
           onClick={() => setTooltipToggle(!tooltipToggle)}
         >
-          {icon} {icon && <Tooltip toggle={setTooltipToggle} />}
+          {icon} {tooltipToggle && <Tooltip toggle={setTooltipToggle} />}
         </div>
       </div>
-      <div className="min-h-2/3 w-full  flex justify-start items-center gap-5">
+      <div className="min-h-2/3 w-full overflow-hidden  flex justify-start items-center gap-5">
         {data?.map((shape, index) => {
           return (
             <div
               key={index}
-              className="p-1 flex flex-col  justify-center items-center gap-2"
+              className="p-1 h-full w-[100px]  flex flex-col  justify-center items-center gap-2"
             >
               <div
-                // className={`${
-                //   activeShape === index && "border-[#804294] bg-[#804294]"
-                // } h-auto w-auto   gap-2 rounded-md focus:border flex justify-center items-center   object-contain  p-3 cursor-pointer`}
-                className={` h-auto w-auto   gap-2 rounded-md focus:border flex justify-center items-center   object-contain  p-3 cursor-pointer`}
+                className={` h-full w-full   gap-2 rounded-md focus:border flex justify-center items-center   object-contain  p-3 cursor-pointer`}
                 key={index}
                 onClick={() => setActiveShape(index)}
               >

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Shape from "./subComponents/Shape";
+import RingShape from "./subComponents/RingShape";
+import FancyColor from "./subComponents/FancyColor";
 import AdvancedFilterContainer from "./subComponents/AdvancedFilterContainer";
 
 const data = [];
@@ -47,13 +49,13 @@ const advancedFilterList = [
   // },
   {
     title: "Cut",
-    value: ["Good","Very Good", "Excellent", "Rare Carat Ideal"],
+    value: ["Good", "Very Good", "Excellent", "Rare Carat Ideal"],
     min: 0,
     max: 4,
   },
   {
     title: "Clarity",
-    value: [ "SI2", "SI1", "VS2", "VS1", "VVS2", "VVS1", "FL","IF"],
+    value: ["SI2", "SI1", "VS2", "VS1", "VVS2", "VVS1", "FL", "IF"],
     min: 0,
     max: 8,
   },
@@ -109,14 +111,16 @@ const AdvancedFilter = () => {
 
   return (
     <div className="relative min-h-[50vh] w-full flex flex-col justify-center items-center gap-3 mb-20 pb-20 border-b  text-[--prussian-blue] transition-all delay-1000 duration-1000">
+      <RingShape icon={infoSVG} />
       <Shape icon={infoSVG} data={shapesArray} />
+      
       <section className="h-full w-full grid grid-cols-2 gap-x-5 gap-y-3 ">
         {advancedFilterList?.map((item, index) => {
           if (!advancedFilterToggle) {
             if (index < 5) {
               return (
                 <AdvancedFilterContainer
-                  key={item.title} // Don't forget to add a unique key prop when mapping over arrays
+                  key={item.title}
                   title={item.title}
                   icon={infoSVG}
                   data={item.value}
@@ -126,9 +130,10 @@ const AdvancedFilter = () => {
               );
             }
           } else {
+          
             return (
               <AdvancedFilterContainer
-                key={item.title} // Don't forget to add a unique key prop when mapping over arrays
+                key={item.title}
                 title={item.title}
                 icon={infoSVG}
                 data={item.value}
@@ -139,7 +144,6 @@ const AdvancedFilter = () => {
           }
         })}
       </section>
-
       <button
         onClick={() => setAdvancedFilterToggle(!advancedFilterToggle)}
         className="absolute -bottom-6   h-12 w-1/6  rounded-sm text-white mx-auto font-['Lato',sans-serif] font-[500] text-[16px] leading-[20px] bg-[#804294] "
