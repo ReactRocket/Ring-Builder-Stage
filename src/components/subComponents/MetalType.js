@@ -290,7 +290,9 @@ const MetalType = ({ data = defaultData, icon, title = "Carat" }) => {
 
   return (
     <div
-      className={`min-h-[12vh] w-full  px-5 py-2 rounded-lg flex flex-col gap-3 bg-[#fffff] ${
+      className={`min-h-[12vh] w-full  ${
+        icon ? "px-5" : "px-0"
+      } py-2 rounded-lg flex flex-col gap-3 bg-[#fffff] ${
         icon && "border"
       } border-[#DCDCDC]`}
     >
@@ -302,25 +304,28 @@ const MetalType = ({ data = defaultData, icon, title = "Carat" }) => {
           className="relative cursor-pointer"
           onClick={() => setTooltipToggle(!tooltipToggle)}
         >
-          {icon} {icon && <Tooltip toggle={setTooltipToggle} />}
+          {icon} {tooltipToggle && <Tooltip toggle={setTooltipToggle} />}
         </div>
       </div>
-      <div className="min-h-2/3 w-full  flex justify-start items-center gap-3">
+      <div
+        className={`min-h-2/3 w-full ${
+          icon
+            ? "flex justify-start items-center gap-3 "
+            : "grid grid-flow-col gap-[2px]"
+        } `}
+      >
         {data?.map((shape, index) => {
           return (
             <div
               key={index}
-              className="p-1 flex flex-col  justify-between items-center "
+              className=" flex flex-col h-full aspect-square w-[80%]  justify-between items-center "
             >
               <div
-                // className={`${
-                //   activeShape === index && "border-[#804294] bg-[#804294]"
-                // } h-auto w-auto   gap-2 rounded-md focus:border flex justify-center items-center   object-contain  p-3 cursor-pointer`}
-                className={` h-auto w-auto    rounded-md focus:border flex justify-center items-center  object-contain  py-2 cursor-pointer relative`}
+                className={` h-full w-full    rounded-md focus:border flex justify-center items-center  object-contain  py-2 cursor-pointer relative`}
                 key={index}
                 onClick={() => setActiveShape(index)}
               >
-                <span className="absolute text-[#1E1E1E] font-['Lato', sans-serif] text-[400] text-[16px] leading-[20px]">
+                <span className="absolute text-[#1E1E1E] font-['Lato', sans-serif] text-[400] text-[14px] leading-[10px]">
                   {shape.value}
                 </span>
                 {generateShape(
@@ -328,9 +333,11 @@ const MetalType = ({ data = defaultData, icon, title = "Carat" }) => {
                   activeShape === index ? "#804294" : "#DCDCDC"
                 )}
               </div>
-              <h3 className="w-full font-[400] text-[15px] leading-[18px] font-['Lato', sans-serif] text-[#464646] text-center">
-                {shape.title}
-              </h3>
+              {icon && (
+                <h3 className="w-full font-[400] text-[15px] leading-[18px] font-['Lato', sans-serif] text-[#464646] text-center">
+                  {shape.title}
+                </h3>
+              )}
             </div>
           );
         })}

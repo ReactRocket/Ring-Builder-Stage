@@ -60,7 +60,7 @@ const DiamondDetails = () => {
 
           <div className="w-1/2 bg-white rounded-md h-full border-2 ">
             <div className="w-full   cursor-pointer h-full flex justify-center items-center border-[#DCDCDC]">
-              <img className="object-cover h-96 " src={Maindiamond} />
+              <img className="object-cover h-96 " src={Maindiamond} alt="img" />
             </div>
             <div className="w-full  h-24 py-4 ">
               <ul className="flex gap-5">
@@ -126,13 +126,13 @@ const DiamondDetails = () => {
               </svg>
             </div>
 
-            <div className="w-4/5 flex gap-28 justify-center items-center">
-              <div className="w-2/3 bg-slate-300">
+            <div className="w-full flex justify-between gap-5 items-center">
+              <div className="w-2/3 h-full overflow-hidden">
                 <MetalType title={"White Gold 14K"} />
               </div>
               <div
                 onClick={handleGroupClick}
-                className="w-48 relative group  flex justify-center  items-center"
+                className="w-1/3 relative group  flex justify-center  items-center"
               >
                 <select className="border   text-start p-4  w-full cursor-pointer rounded-md text-[#000000] appearance-none">
                   <option>Select ring size</option>
@@ -145,7 +145,6 @@ const DiamondDetails = () => {
                 </select>
                 <span className="absolute overflow-visible cursor-pointer right-3">
                   <svg
-                   
                     className={`w-4 h-4  ${
                       isClicked ? " transform rotate-180" : ""
                     }`}
