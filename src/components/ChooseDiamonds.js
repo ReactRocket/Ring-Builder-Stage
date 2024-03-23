@@ -3,8 +3,8 @@ import React, { useState } from "react";
 const ChooseDiamonds = () => {
   const [option, SetOption] = useState(1);
   return (
-    <div className="my-10 h-12 w-full flex justify-center items-center ">
-      <div className="h-full w-[40%] bg-[#F0F0F0] border rounded-md   flex shadow-inner p-1 gap-3">
+    <div className="my-10    h-12 lg:w-full flex justify-center items-center ">
+      <div className="h-full lg:w-[40%] w-40%   bg-[#F0F0F0] border rounded-md   flex shadow-inner p-1 gap-3">
         <button
           className={`${
             option === 1 ? "selected" : ""

@@ -83,15 +83,15 @@ const DiamondDetails = () => {
                 0.70 Carat Emerald Lab Diamond
               </span>
             </div>
-            <div className="w-full py-2 flex  items-center">
-              <span className="font-[Tomato Grotesk] text-xl font-semibold text-[#804294] leading-9 ">
+            <div className="w-full py-2 flex justify-start   items-center">
+              <span className="font-[Tomato Grotesk]  text-xl font-semibold text-[#804294] leading-9 ">
                 {" "}
                 $450.00
               </span>
-              <del className="font-[Poppins] px-2   text-[#464646] font-normal text-base">
+              <del className="font-['Poppins'] px-2   text-[#464646]  text-sm">
                 $599.99
               </del>
-              <span className="font-[Poppins] px-1   text-[#464646] font-normal text-base">
+              <span className="font-[Poppins] px-1   text-[#464646] font-normal text-sm ">
                 (Setting Only)
               </span>
             </div>
