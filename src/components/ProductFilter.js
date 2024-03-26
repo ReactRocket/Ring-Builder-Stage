@@ -15,19 +15,19 @@ const ProductFilter = ({ setProductView, productView }) => {
           </p>
         </div>
         <div className=" min-h-14 w-full  flex justify-end items-end ">
-          <div className=" w-1/2 flex gap-3 justify-center cursor-pointer items-end">
-            <div className="h-full w-2/3  flex font-[Poppins]   font-medium leading-4 text-[#804294] text-base   gap-2 text-center p-2.5 rounded-md border border-[#804294] ">
-              <label>Sort:</label>
-              <select className="w-full">
-                <option>Best Value</option>
-                <option>Best Value</option>
-                <option>Best Value</option>
-                <option>Best Value</option>
-                <option>Best Value</option>
-                <option>Best Value</option>
+          <div className="h-full w-1/2 flex gap-3 justify-center  cursor-pointer ">
+            <div className=" w-2/3   flex  font-[Poppins] cursor-pointer justify-center items-center  font-medium leading-4 text-[#804294] text-base  p-2 rounded-md border border-[#804294] ">
+              <label className="text-center">Sort:</label>
+              <select className="cursor-pointer font-[Poppins] flex  px-3 justify-center items-center font-medium focus:outline-none">
+                <option value="Best Value">Best Value</option>
+                <option value="Best Value">Best Value</option>
+                <option value="Best Value">Best Value</option>
+                <option value="Best Value">Best Value</option>
+                <option value="Best Value">Best Value</option>
+                <option value="Best Value">Best Value</option>
               </select>
             </div>
-            <div className="h-full w-30 p-1   gap-2 rounded-md border flex justify-center items-center  border-[#804294]  ">
+            <div className=" w-30 p-1 ju   gap-2 rounded-md border flex justify-around items-center  border-[#804294]  ">
               <button
                 className={`rounded-sm ${
                   productView === false ? "bg-[#804294]" : "bg-white"
@@ -35,8 +35,8 @@ const ProductFilter = ({ setProductView, productView }) => {
                 onClick={() => setProductView(false)}
               >
                 <svg
-                  width="16"
-                  height="16"
+                  width="19"
+                  height="19"
                   viewBox="0 0 20 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -86,8 +86,8 @@ const ProductFilter = ({ setProductView, productView }) => {
                 onClick={() => setProductView(true)}
               >
                 <svg
-                  width="16"
-                  height="16"
+                  width="19"
+                  height="19"
                   viewBox="0 0 20 20"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
