@@ -96,13 +96,13 @@ const DiamondInfoTable = () => {
                 className="border border-[#DCDCDC] w-full flex gap-4 p-1.5"
                 key={property.name}
               >
-                <div className="text-[#804294] font-[Poppins]  font-medium text-sm h-full px-2 w-1/2">
+                <div className="text-[#804294] font-[Poppins]  font-semibold  text-sm h-full px-2 w-1/2 ">
                   {property.name}
                 </div>
 
-                <span className={`${property.name == null && "hidden"}`}>:</span>
+                <span className={`${property.name == null && "hidden" }`}>:</span>
 
-                <div className="w-2/3 h-full text-sm font-[Poppins]  font-medium  px-3 text-nowrap text-[#464646]">
+                <div className="w-1/2 h-full text-sm font-[Poppins]  font-medium text-ellipsis   text-[#464646] ">
                   {" "}
                   {property.value}
                 </div>
