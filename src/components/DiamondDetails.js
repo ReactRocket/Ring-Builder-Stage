@@ -126,22 +126,22 @@ const DiamondDetails = () => {
               </svg>
             </div>
 
-            <div className="w-full flex justify-between gap-5 items-center">
-              <div className="w-2/3 h-full overflow-hidden">
+            <div className="w-full justify-between items-end pr-10 flex  gap-5 ">
+              <div className="w-[60%] h-full overflow-hidden">
                 <MetalType title={"White Gold 14K"} />
               </div>
               <div
                 onClick={handleGroupClick}
-                className="w-1/3 relative group  flex justify-center  items-center"
+                className="w-[25%] h-full pb-3  relative   group flex   justify-center items-center "
               >
-                <select className="border   text-start p-4  w-full cursor-pointer rounded-md text-[#000000] appearance-none">
-                  <option>Select ring size</option>
-                  <option>Select ring size</option>
-                  <option>Select ring size</option>
-                  <option>Select ring size</option>
-                  <option>Select ring size</option>
-                  <option>Select ring size</option>
-                  <option>Select ring size</option>
+                <select className="border  text-start p-2 flex justify-center items-center  w-full focus:outline-none cursor-pointer rounded-md text-[#000000]  appearance-none">
+                  <option value="select ring">Select ring size</option>
+                  <option value="select ring">Select ring size</option>
+                  <option value="select ring">Select ring size</option>
+                  <option value="select ring">Select ring size</option>
+                  <option value="select ring">Select ring size</option>
+                  <option value="select ring">Select ring size</option>
+                  <option value="select ring">Select ring size</option>
                 </select>
                 <span className="absolute overflow-visible cursor-pointer right-3">
                   <svg
