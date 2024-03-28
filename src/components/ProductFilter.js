@@ -16,9 +16,9 @@ const ProductFilter = ({ setProductView, productView }) => {
         </div>
         <div className=" min-h-14 w-full  flex justify-end items-end ">
           <div className="h-full w-1/2 flex gap-3 justify-center  cursor-pointer ">
-            <div className=" w-2/3   flex  font-[Poppins] cursor-pointer justify-center items-center  font-medium leading-4 text-[#804294] text-base  p-2 rounded-md border border-[#804294] ">
+            <div className=" w-2/3   flex  font-[Poppins]  cursor-pointer justify-center items-center  font-medium leading-4 text-[#804294] text-base  p-2 rounded-md border border-[#804294] ">
               <label className="text-center">Sort:</label>
-              <select className="cursor-pointer font-[Poppins] flex  px-3 justify-center items-center font-medium focus:outline-none">
+              <select className="cursor-pointer font-[Poppins] flex   px-3 justify-center items-center font-medium focus:outline-none">
                 <option value="Best Value">Best Value</option>
                 <option value="Best Value">Best Value</option>
                 <option value="Best Value">Best Value</option>
@@ -27,11 +27,11 @@ const ProductFilter = ({ setProductView, productView }) => {
                 <option value="Best Value">Best Value</option>
               </select>
             </div>
-            <div className=" w-30 p-1 ju   gap-2 rounded-md border flex justify-around items-center  border-[#804294]  ">
+            <div className=" w-30 p-1.5   gap-2 rounded-md border flex justify-around items-center  border-[#804294]  ">
               <button
                 className={`rounded-sm ${
                   productView === false ? "bg-[#804294]" : "bg-white"
-                }  p-2 `}
+                }  p-3 `}
                 onClick={() => setProductView(false)}
               >
                 <svg
@@ -82,7 +82,7 @@ const ProductFilter = ({ setProductView, productView }) => {
               <button
                 className={` rounded-sm ${
                   productView === true ? "bg-[#804294]" : "bg-white"
-                }  p-2 `}
+                }  p-3 `}
                 onClick={() => setProductView(true)}
               >
                 <svg
