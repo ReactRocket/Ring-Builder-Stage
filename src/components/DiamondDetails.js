@@ -15,6 +15,7 @@ import RingInfoTable from "./subComponents/RingInfoTable";
 import MetalType from "./subComponents/MetalType";
 
 const DiamondDetails = () => {
+  const [toggle, setToggle] = useState(0);
   const details = [
     {
       imageSrc: img1,
@@ -60,17 +61,27 @@ const DiamondDetails = () => {
 
           <div className="w-1/2 bg-white rounded-md h-full border-2 ">
             <div className="w-full   cursor-pointer h-full flex justify-center items-center border-[#DCDCDC]">
-              <img className="object-cover h-96 " src={Maindiamond} alt="img" />
+              <img
+                className="object-cover h-96 "
+                src={toggle || Maindiamond}
+                alt="img"
+              />
             </div>
             <div className="w-full  h-24 py-4 ">
               <ul className="flex gap-5">
                 {details.map((detail, index) => (
-                  <li
-                    className="border w-40 rounded-md cursor-pointer p-0.5"
+                  <button
+                    className="border w-40  focus:border-[#804294] rounded-md cursor-pointer p-0.5"
                     key={index}
                   >
-                    <img src={detail.imageSrc} alt={detail.altText} />
-                  </li>
+                    <img
+                      onClick={() => {
+                        setToggle(detail.imageSrc);
+                      }}
+                      src={detail.imageSrc}
+                      alt={detail.altText}
+                    />
+                  </button>
                 ))}
               </ul>
             </div>
@@ -277,30 +288,30 @@ const DiamondDetails = () => {
                 </p>
               </div>
             </div>
-            <div className="w-full  h-48  flex gap-4 ">
-              <div className="w-[30%]  h-full  ">
+            <div className="w-full  h-40 flex justify-start gap-2">
+              <div className="w-[30%] pr-8 h-full  ">
                 <img className="h-full w-full object-contain" src={rectangle} />
               </div>
               <div className="w-[70%] h-full   ">
                 <div className="leading-8">
-                  <p className="text-[#804294] font-[Tomato Grotesk] text-2xl font-semibold">
+                  <p className="text-[#804294] font-[Tomato Grotesk] text-xl font-semibold">
                     Uniquely Yours
                   </p>
                 </div>
                 <div className="min-w-80 py-2">
-                  <p className="font-[lato] text-[#464646] font-medium text-lg wrap">
+                  <p className="font-[lato] text-[#464646] font-medium text-base wrap">
                     1/6 CTW. Diamond set with purchase over
                   </p>
-                  <p className="font-[lato] text-[#464646] font-medium text-lg wrap">
+                  <p className="font-[lato] text-[#464646] font-medium text-base wrap">
                     $1,000.
                   </p>
                 </div>
 
                 <div className="min-w-80 ">
-                  <p className="font-[lato] text-[#464646] font-medium text-lg wrap">
+                  <p className="font-['Lato', sans-serif] text-[#464646] font-medium text-base wrap">
                     1/2 CTW. Diamond set with purchase over
                   </p>
-                  <p className="font-[lato] text-[#464646] font-medium text-lg wrap">
+                  <p className="font-['Lato', sans-serif] text-[#464646] font-medium text-base wrap">
                     $3,000.
                   </p>
                 </div>
@@ -312,8 +323,8 @@ const DiamondDetails = () => {
               </div>
             </div>
             <hr className="mt-5 border-[#DCDCDC]" />
-            {/* <DiamondInfoTable /> */}
-            <RingInfoTable />
+            <DiamondInfoTable />
+            {/* <RingInfoTable /> */}
           </div>
         </div>
       </div>
