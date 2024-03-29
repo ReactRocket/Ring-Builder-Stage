@@ -40,7 +40,6 @@ input[type="number"] {
 }
 
 .thumb {
- 
   pointer-events: none;
   position: absolute;
   height: 0px;
@@ -48,11 +47,11 @@ input[type="number"] {
 }
 
 .thumb--left {
-  z-index: 20;
+  z-index: 20 !important;
 }
 
 .thumb--right {
-  z-index: 20;
+  z-index: 20 !important;
 }
 
 .thumb::-webkit-slider-thumb {
