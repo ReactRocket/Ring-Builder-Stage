@@ -73,14 +73,18 @@ const Slider = ({ min = 1, max = 100, onChange = { test }, data = [] }) => {
         className="thumb thumb--right"
       />
 
-      <div className="slider  ">
+      <div className="slider">
         <div className="slider__track" />{" "}
-        <div className="absolute w-full -top-1   flex justify-around items-center ">
-          <li className="z-10 border-r-2 border-r-white w-full list-none h-2"></li>
-          <li className="z-10 border-r-2 border-r-white w-full list-none h-2"></li>
-          <li className="z-10 border-r-2 border-r-white w-full list-none h-2"></li>
-          <li className=" w-full list-none h-5"></li>
-        </div>
+        {data.length > 0 && Array.from({ length: max }, (_, index) => (
+          <span
+            key={index}
+            className={`absolute left-[${
+              (100 / max) * (index + 1)
+            }%] z-10 text-white font-bold`}
+          >
+            |
+          </span>
+        ))}
         <div ref={range} className="slider__range" />
       </div>
       <>
