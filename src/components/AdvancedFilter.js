@@ -110,7 +110,7 @@ const AdvancedFilter = () => {
   const [advancedFilterToggle, setAdvancedFilterToggle] = useState(false);
 
   return (
-    <div className="relative min-h-[50vh] w-full flex flex-col justify-center items-center gap-3 mb-20 pb-20 border-b  text-[--prussian-blue] transition-all delay-1000 duration-1000">
+    <div className="relative mt-10 min-h-[50vh] w-full flex flex-col justify-center items-center gap-3 mb-20 pb-20 border-b  text-[--prussian-blue] transition-all delay-1000 duration-1000">
       <RingShape icon={infoSVG} />
       <Shape icon={infoSVG} data={shapesArray} />
       

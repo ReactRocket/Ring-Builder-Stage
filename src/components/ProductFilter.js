@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 
-const ProductFilter = ({ setProductView, productView }) => {
+const ProductFilter = ({ setProductView, productView ,title,description}) => {
   return (
     <>
       <div className=" min-h-14 w-full flex pb-10 ">
         <div className=" min-h-14 w-full   ">
           <span className=" font-['Lato', sans-serif] text-[#804294] font-medium text-xl ">
-            Round Natural Diamond
+          {title || "Round Natural Diamond"}
           </span>
 
           <p className=" font-['Lato', sans-serif] font-normal text-base">
-            Shop Certified Natural Diamonds 277,856 Conflict-Free Natural
-            Diamonds
+            {description || "Shop Certified Natural Diamonds 277,856 Conflict-Free Natural Diamonds"}
           </p>
         </div>
         <div className=" min-h-14 w-full  flex justify-end items-end ">

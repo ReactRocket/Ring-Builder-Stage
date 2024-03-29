@@ -4,8 +4,8 @@ import OrderSummary from "./subcomponents/OrderSummary";
 
 const Complete = () => {
   return (
-    <div className="min-h-screen w-full p-20">
-      <div className="min-h-[5vh] w-full py-">
+    <div className="min-h-screen w-full py-10 ">
+      <div className="min-h-[5vh] w-full ">
         <h1 className=" font-['Lato', sans-serif] font-[500] text-[18px] text-[#804294]">
           My Cart (2 items)
         </h1>
