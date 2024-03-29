@@ -12,7 +12,7 @@ const ProductCard = ({ data }) => {
         }  items-center flex-col`}
       >
         <div className="h-1/3 w-full flex flex-col justify-between items-start ">
-          <h1 className="text-[#1E1E1E] text-[20px] leading-[38px] font-[800] font-['Poppins']">
+          <h1 className="text-[#1E1E1E] text-[20px] leading-[38px] font-[800] text-nowrap font-['Poppins'] text-ellipsis w-full">
             {data.title}
           </h1>
           <h3 className="font-['Lato'] font-[400] text-[14px] text-[#464646]">

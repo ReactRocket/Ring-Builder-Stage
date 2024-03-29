@@ -1,24 +1,17 @@
 /* eslint-disable react/jsx-pascal-case */
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Diamond from "./pages/diamond/Diamond";
-import Setting from "./pages/setting/Setting";
-import Complete from "./pages/complete/Complete";
-import Test from "./pages/test/Test";
-import Error_404 from "./pages/error/Error_404";
 
+import MainRoutes from "./routes/MainRoutes";
+import Breadcrumb from "./components/Breadcrumb";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Diamond />} />
-        <Route path="/setting" element={<Setting />} />
-        <Route path="/complete" element={<Complete />} />
-        <Route path="/test" element={<Test />} />
-        <Route path="*" element={<Error_404 />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="min-h-screen max-w-screen ">
+      <div className="h-[90%] w-[85%] flex-col py-10 mx-auto flex justify-start items-center">
+        <Breadcrumb />
+        <MainRoutes />
+      </div>
+    </div>
   );
 };
 

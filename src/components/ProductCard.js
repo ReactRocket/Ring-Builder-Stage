@@ -1,10 +1,11 @@
 import React from "react";
 import productIMG from "./resources/images/product_card/ProductChild.svg";
+import { Link } from "react-router-dom";
 
 const ProductCard = () => {
   return (
     <div className="min-h-[45vh] w-full border border-[#DCDCDC] flex justify-center items-center">
-      <div className="w-[90%] h-full py-10  flex-col flex justify-between items-center gap-3 cursor-pointer">
+      <Link to={"/diamond=view"} className="w-[90%] h-full py-10  flex-col flex justify-between items-center gap-3 cursor-pointer">
         <div className="h-[60%]  w-full flex justify-center items-center select-none  ">
           <img
             src={productIMG}
@@ -23,7 +24,7 @@ const ProductCard = () => {
             $1324.00 (Setting Price)
           </p>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };

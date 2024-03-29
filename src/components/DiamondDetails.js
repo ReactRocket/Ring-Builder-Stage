@@ -50,13 +50,13 @@ const DiamondDetails = () => {
 
   return (
     <>
-      <div className="w-full bg-red-4000 h-screen px-10 py-10">
+      <div className="w-full  min-h-screen py-10">
         <div className="bg-white  w-full h-8  ">
           <span className="font-[Lato] text-[#1E1E1E] text-xl font-semibold leading-7 text">
             Solitaire Rings
           </span>
         </div>
-        <div className="w-full h-5/6      py-5 flex gap-10">
+        <div className="w-full h-5/6 py-5 flex gap-10">
           {/* First section  */}
 
           <div className="w-1/2 bg-white rounded-md h-full border-2 ">

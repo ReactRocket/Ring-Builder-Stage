@@ -339,6 +339,7 @@ const OrderSummary = () => {
           </span>
           <span>Book a Virtual Consultation</span>
         </button>
+        <br />
       </div>
     </div>
   );
