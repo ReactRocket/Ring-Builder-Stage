@@ -58,3 +58,10 @@ img {
 a {
   text-decoration: none;
 }
+
+img,
+svg,
+#dots {
+  user-select: none;
+  cursor: pointer;
+}

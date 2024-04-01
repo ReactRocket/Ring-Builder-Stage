@@ -75,16 +75,26 @@ const Slider = ({ min = 1, max = 100, onChange = { test }, data = [] }) => {
 
       <div className="slider">
         <div className="slider__track" />{" "}
-        {data.length > 0 && Array.from({ length: max }, (_, index) => (
-          <span
-            key={index}
-            className={`absolute left-[${
-              (100 / max) * (index + 1)
-            }%] z-10 text-white font-bold`}
-          >
-            |
-          </span>
-        ))}
+        {data.length > 0 &&
+          Array.from(
+            { length: max },
+            (_, index) => {
+              if (index < data.length - 1) {
+                return (
+                  <span
+                    id="dots"
+                    key={index}
+                    className={`absolute left-[${
+                      (100 / max) * (index + 1)
+                    }%] z-10 text-white font-bold`}
+                  >
+                    |
+                  </span>
+                );
+              }
+            },
+            0
+          )}
         <div ref={range} className="slider__range" />
       </div>
       <>
@@ -98,17 +108,21 @@ const Slider = ({ min = 1, max = 100, onChange = { test }, data = [] }) => {
           <div className="values">
             <input
               className="slider__left-value "
-              onChange={(e) =>
-                minVal > min && minVal < max && setMinVal(e.target.value)
-              }
+              onChange={(e) => {
+                if (e.target.value >= min && e.target.value <= max) {
+                  setMinVal(e.target.value);
+                }
+              }}
               value={minVal}
               type="number"
             />
             <input
               className="slider__right-value"
-              onChange={(e) =>
-                maxVal > min && maxVal < max && setMaxVal(e.target.value)
-              }
+              onChange={(e) => {
+                if (e.target.value >= min && e.target.value <= max) {
+                  setMaxVal(e.target.value);
+                }
+              }}
               value={maxVal}
               type="number"
             />
