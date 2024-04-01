@@ -59,19 +59,19 @@ const DiamondDetails = () => {
         <div className="w-full h-5/6 py-5 flex gap-10">
           {/* First section  */}
 
-          <div className="w-1/2 bg-white rounded-md h-full border-2 ">
-            <div className="w-full   cursor-pointer h-full flex justify-center items-center border-[#DCDCDC]">
+          <div className="w-[42%]  h-full bg-red-0   ">
+            <div className="w-full h-2/4 p-20  rounded-md cursor-pointer  flex justify-center items-center border-2 border-[#DCDCDC]">
               <img
-                className="object-cover h-96 "
+                className="object-cover h-96  "
                 src={toggle || Maindiamond}
                 alt="img"
               />
             </div>
-            <div className="w-full  h-24 py-4 ">
+            <div className="w-full h-10 py-7">
               <ul className="flex gap-5">
                 {details.map((detail, index) => (
                   <button
-                    className="border w-40  focus:border-[#804294] rounded-md cursor-pointer p-0.5"
+                    className="border w-40  focus:border-[#804294] rounded-md  p-0.5"
                     key={index}
                   >
                     <img
@@ -88,7 +88,7 @@ const DiamondDetails = () => {
           </div>
 
           {/* second section  */}
-          <div className="w-1/2 h-full ">
+          <div className="w-[58%] h-full ">
             <div className="w-full h-8">
               <span className="font-[Lato] text-[#1E1E1E] text-2xl font-semibold leading-9 ">
                 0.70 Carat Emerald Lab Diamond
@@ -137,8 +137,8 @@ const DiamondDetails = () => {
               </svg>
             </div>
 
-            <div className="w-full justify-between items-end pr-10 flex  gap-5 ">
-              <div className="w-[60%] h-full overflow-hidden">
+            <div className="w-full justify-between items-end  flex  gap-5 ">
+              <div className="w-[65%] h-full overflow-hidden">
                 <MetalType title={"White Gold 14K"} />
               </div>
               <div
