@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Maindiamond from "../components/resources/images/diamond_details/image 1.svg";
-
+import { useLocation } from "react-router-dom";
 import rectangle from "../components/resources/images/diamond_details/Rectangle.svg";
 
 import img1 from "../components/resources/images/diamond_details/image1.svg";
@@ -13,9 +13,11 @@ import DiamondInfoTable from "./subComponents/DiamondInfoTable";
 import RingInfoTable from "./subComponents/RingInfoTable";
 
 import MetalType from "./subComponents/MetalType";
+import Tooltip from "./Tooltip";
 
 const DiamondDetails = () => {
   const [toggle, setToggle] = useState(0);
+  const [tooltipToggle,setTooltipToggle] = useState(false);
   const details = [
     {
       imageSrc: img1,
@@ -44,6 +46,8 @@ const DiamondDetails = () => {
   ];
   const [isClicked, setIsClicked] = useState(false);
 
+  const location = useLocation()
+
   const handleGroupClick = () => {
     setIsClicked(!isClicked);
   };
@@ -59,10 +63,10 @@ const DiamondDetails = () => {
         <div className="w-full h-5/6 py-5 flex gap-10">
           {/* First section  */}
 
-          <div className="w-[42%]  h-full bg-red-0   ">
+          <div className="w-1/2  h-full bg-red-0   ">
             <div className="w-full h-2/4 p-20  rounded-md cursor-pointer  flex justify-center items-center border-2 border-[#DCDCDC]">
               <img
-                className="object-cover h-96  "
+                className="object-contain h-96 w-full  "
                 src={toggle || Maindiamond}
                 alt="img"
               />
@@ -88,7 +92,7 @@ const DiamondDetails = () => {
           </div>
 
           {/* second section  */}
-          <div className="w-[58%] h-full ">
+          <div className="w-1/2 h-full ">
             <div className="w-full h-8">
               <span className="font-[Lato] text-[#1E1E1E] text-2xl font-semibold leading-9 ">
                 0.70 Carat Emerald Lab Diamond
@@ -115,35 +119,39 @@ const DiamondDetails = () => {
               <span className="text-[#000000] font-[Poppins] text-base leading-6">
                 Wholesaler Direct
               </span>
-              <svg
-                className="cursor-pointer"
-                width="16"
-                height="16"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g clipPath="url(#clip0_197_15581)">
-                  <path
-                    d="M10 0C4.47301 0 0 4.4725 0 10C0 15.5269 4.4725 20 10 20C15.527 20 20 15.5275 20 10C20 4.47309 15.5275 0 10 0ZM11.0269 13.9696C11.0269 14.2855 10.5662 14.6014 10.0002 14.6014C9.40785 14.6014 8.98668 14.2855 8.98668 13.9696V8.95445C8.98668 8.5859 9.40789 8.33574 10.0002 8.33574C10.5662 8.33574 11.0269 8.5859 11.0269 8.95445V13.9696ZM10.0002 7.12484C9.39473 7.12484 8.9209 6.6773 8.9209 6.17707C8.9209 5.67687 9.39477 5.2425 10.0002 5.2425C10.5926 5.2425 11.0665 5.67687 11.0665 6.17707C11.0665 6.6773 10.5925 7.12484 10.0002 7.12484Z"
-                    fill="#804294"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_197_15581">
-                    <rect width="20" height="20" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
+              <span className="relative">
+                <svg
+                onClick={()=> setTooltipToggle(true)}
+                  className="cursor-pointer"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clipPath="url(#clip0_197_15581)">
+                    <path
+                      d="M10 0C4.47301 0 0 4.4725 0 10C0 15.5269 4.4725 20 10 20C15.527 20 20 15.5275 20 10C20 4.47309 15.5275 0 10 0ZM11.0269 13.9696C11.0269 14.2855 10.5662 14.6014 10.0002 14.6014C9.40785 14.6014 8.98668 14.2855 8.98668 13.9696V8.95445C8.98668 8.5859 9.40789 8.33574 10.0002 8.33574C10.5662 8.33574 11.0269 8.5859 11.0269 8.95445V13.9696ZM10.0002 7.12484C9.39473 7.12484 8.9209 6.6773 8.9209 6.17707C8.9209 5.67687 9.39477 5.2425 10.0002 5.2425C10.5926 5.2425 11.0665 5.67687 11.0665 6.17707C11.0665 6.6773 10.5925 7.12484 10.0002 7.12484Z"
+                      fill="#804294"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_197_15581">
+                      <rect width="20" height="20" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                {tooltipToggle && <Tooltip data={{title:"Sanju",description:"Tree: A convention for visualizing a hierarchical structure. For example, a component tree with parent and children components, a folder structure, etc. Subtree: Part of a tree, starting at a new root (first) and ending at the leaves (last). Root: The first node in a tree or subtree, such as a root layout. Leaf: Nodes in a subtree that have no children, such as the last segment in a URL path. Terminology for URL Anatomy URL Segment: Part of the URL path delimited by slashes. URL Path: Part of the URL that comes after the domain (composed of segments). The app Router In version 13, Next.js introduced a new App Router built on React Server Components, which supports shared layouts, nested routing, loading states, error handling, and more. The App Router works in a new directory named app. The app directory works alongside the pages directory to allow for in"}} toggle={setTooltipToggle}/>}
+              </span>
             </div>
 
-            <div className="w-full justify-between items-end  flex  gap-5 ">
-              <div className="w-[65%] h-full overflow-hidden">
+            <div className="w-full justify-between items-end   flex  gap-5 ">
+              <div className="w-[70%] h-full overflow-hidden ">
                 <MetalType title={"White Gold 14K"} />
               </div>
               <div
                 onClick={handleGroupClick}
-                className="w-[25%] h-full pb-3  relative   group flex   justify-center items-center "
+                className="w-[30%] h-full  relative   group flex py-2   justify-center items-center "
               >
                 <select className="border  text-start p-2 flex justify-center items-center  w-full focus:outline-none cursor-pointer rounded-md text-[#000000]  appearance-none">
                   <option value="select ring">Select ring size</option>
@@ -288,9 +296,9 @@ const DiamondDetails = () => {
                 </p>
               </div>
             </div>
-            <div className="w-full  h-40 flex justify-start gap-2">
-              <div className="w-[30%] pr-8 h-full  ">
-                <img className="h-full w-full object-contain" src={rectangle} />
+            <div className="w-full  h-40 flex justify-start gap-5">
+              <div className="w-[30%]  h-full  ">
+                <img className="h-full w-full object-contain" src={rectangle} alt="diamond" />
               </div>
               <div className="w-[70%] h-full   ">
                 <div className="leading-8">
@@ -323,8 +331,10 @@ const DiamondDetails = () => {
               </div>
             </div>
             <hr className="mt-5 border-[#DCDCDC]" />
-            <DiamondInfoTable />
-            {/* <RingInfoTable /> */}
+            {location.pathname === "/diamond/view" && <DiamondInfoTable />}
+            {location.pathname === "/setting/view" && <RingInfoTable />}
+            
+            
           </div>
         </div>
       </div>

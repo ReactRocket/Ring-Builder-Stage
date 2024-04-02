@@ -311,7 +311,7 @@ const MetalType = ({ data = defaultData, icon, title = "Carat" }) => {
         className={`min-h-2/3 w-full ${
           icon
             ? "flex justify-start items-center gap-3 "
-            : "grid grid-flow-col gap-[2px]"
+            : "grid grid-flow-col px-1"
         } `}
       >
         {data?.map((shape, index) => {
@@ -321,7 +321,7 @@ const MetalType = ({ data = defaultData, icon, title = "Carat" }) => {
               className=" flex flex-col h-full aspect-square w-[80%]  justify-between items-center "
             >
               <div
-                className={` h-full w-full    rounded-md focus:border flex justify-center items-center  object-contain  py-2 cursor-pointer relative`}
+                className={` h-[40px] w-[40px]    rounded-md focus:border flex justify-center items-center  object-contain  py-2 cursor-pointer relative `}
                 key={index}
                 onClick={() => setActiveShape(index)}
               >
