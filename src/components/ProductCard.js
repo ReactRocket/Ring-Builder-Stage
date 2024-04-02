@@ -8,9 +8,9 @@ const ProductCard = () => {
     <div className="min-h-[45vh] w-full border border-[#DCDCDC] flex justify-center items-center">
       <Link
         to={
-          location.pathname.split("/")[1].toString() === "diamond"
+          location.pathname === "/diamond" ||  location.pathname === "/"
             ? "/diamond/view"
-            : location.pathname.split("/")[1].toString() === "setting"
+            : location.pathname === "/setting"
             ? "/setting/view"
             : "/"
         }

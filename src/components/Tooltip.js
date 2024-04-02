@@ -3,7 +3,7 @@ import "../components/resources/css/tooltip.css";
 const Tooltip = ({ data, toggle }) => {
   return (
     <div
-      className="z-50 top-10 -left-5 absolute rounded-xl w-[450px] shadow h-[200px] 
+      className="z-50 top-10 -left-5 absolute rounded-xl min-w-[450px] shadow min-h-[20px] 
       font-['Lato', sans-serif] "
       style={{ boxShadow: "0px 0px 15px 0px #0000004D" }}
     >
@@ -11,7 +11,7 @@ const Tooltip = ({ data, toggle }) => {
         id="triangle-up"
         className="absolute -top-[14.5px] shadow-xl left-5"
       ></span>
-      <div className="h-full bg-white w-full rounded-lg  shadow-xl p-5 overflow-hidden ">
+      <div className="min-h-full bg-white w-full rounded-lg  shadow-xl p-5 overflow-hidden ">
         <div className="w-full h-[7%] flex justify-between items-center pb-5 ">
           <h1 className="font-medium text-[#804294] text-lg ">
             {data?.title || "Title"}
@@ -31,7 +31,7 @@ const Tooltip = ({ data, toggle }) => {
             </svg>
           </button>
         </div>
-        <div className="w-full h-[93%]  text-[#464646] text-lg font-normal text-wrap overflow-y-auto .scrollBar ">
+        <div className="w-full max-h-[120px]  text-[#464646] text-lg font-normal text-wrap overflow-y-auto .scrollBar ">
           <p>
             {data?.description ||
               "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum iure vero suscipit dolor ex officia aut nobis sapiente voluptas delectus praesentium quas maxime est aperiam odit rerum eligendi, a recusandae corrupti veniam alias dolores omnis, velit itaque. Quam corrupti neque assumenda odio itaque voluptatum repellat ullam aut ducimus veniam, facilis iusto dicta necessitatibus officiis laudantium, provident ea in quia optio hic soluta numquam velit eum? Odit quibusdam commodi asperiores facilis et sequi nesciunt quas odio doloribus qui possimus neque provident, reiciendis omnis quia laboriosam id excepturi quo, repudiandae molestiae cum aut ad ipsam eos. Fugit et veniam consequuntur architecto possimus!"}
