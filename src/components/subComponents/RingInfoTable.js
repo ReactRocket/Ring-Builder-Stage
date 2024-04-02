@@ -43,10 +43,10 @@ const RingInfoTable = () => {
               {ringInfo.map((item, index) => {
                 return (
                   <li key={index} className="flex ">
-                    <div className="font-[Poppins] text-[#804294] w-36   text-sm font-medium leading-7">
+                    <div className="font-[Poppins] text-[#804294] w-1/4   text-sm font-medium leading-7">
                       {item.name}
                     </div>
-                    <div className="text-sm font-[Poppins] font-normal  text-[#464646]">
+                    <div className="text-sm font-[Poppins] w-3/4 font-normal text-nowrap  text-[#464646]">
                       {item.value}
                     </div>
                   </li>
@@ -54,8 +54,8 @@ const RingInfoTable = () => {
               })}
             </ul>
             <hr className="my-5  border-[#DCDCDC] w-full" />
-            <div className="w-full flex gap-5 h-12 ">
-            <div className="w-1/3 py-2 h-full border border-[#804294] cursor-pointer rounded-md">
+            <div className="w-full flex gap-2 h-12  ">
+            <div className="w-1/3 flex h-full justify-center items-center  border border-[#804294] cursor-pointer rounded-md">
               <div className="flex gap-2 justify-center items-center ">
                 <svg
                   width="27"
@@ -81,8 +81,8 @@ const RingInfoTable = () => {
                 </span>
               </div>
             </div>
-            <div className="w-1/3 h-full border border-[#804294] rounded-md cursor-pointer">
-              <div className="flex justify-center items-center  py-2 gap-2">
+            <div className="w-1/3 h-full border border-[#804294] flex justify-center rounded-md cursor-pointer">
+              <div className="flex justify-center items-center   gap-1">
                 <svg
                   width="27"
                   height="27"
@@ -96,13 +96,13 @@ const RingInfoTable = () => {
                   />
                 </svg>
 
-                <span className="text-[#804294] font-medium">
+                <span className="text-[#804294] font-medium text-nowrap">
                   Book an Appointment
                 </span>
               </div>
             </div>
-            <div className="w-1/3 h-full border border-[#804294] cursor-pointer  rounded-md">
-              <div className="flex justify-center items-center gap-2 py-2 ">
+            <div className="w-1/3 h-full border border-[#804294] flex justify-center items-center  cursor-pointer  rounded-md">
+              <div className=" flex justify-center items-center gap-2  ">
                 <svg
                   width="27"
                   height="27"
