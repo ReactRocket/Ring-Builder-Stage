@@ -46,7 +46,7 @@ const RingInfoTable = () => {
                     <div className="font-[Poppins] text-[#804294] w-1/4   text-sm font-medium leading-7">
                       {item.name}
                     </div>
-                    <div className="text-sm font-[Poppins] w-3/4 font-normal text-nowrap  text-[#464646]">
+                    <div className="text-sm font-[Poppins] w-3/4 font-normal text-nowrap  text-ellipsis overflow-hidden text-[#464646]">
                       {item.value}
                     </div>
                   </li>
